@@ -17,25 +17,41 @@ export default function Footer() {
     <footer className="mt-20 border-t border-[#d9def8] bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fe_100%)]">
       <div className="mx-auto max-w-6xl px-5 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
         <div className="grid gap-12 sm:gap-14 md:grid-cols-[minmax(0,1.35fr)_180px_220px] md:items-start md:justify-between md:gap-16">
+          
           {/* Bloc gauche */}
           <div className="flex justify-center md:justify-start">
             <div className="w-full max-w-[420px] md:max-w-[500px]">
               <div className="mx-auto flex w-full flex-col items-center text-center md:-mt-1">
-                <Link href="/" className="inline-block">
+                
+                <Link href="/home" className="inline-block">
                   <div className="flex flex-col items-center leading-none">
-                    <div className={`${monogramFont.className} relative flex items-center justify-center`}>
-                      <span className="text-[58px] font-medium tracking-[-0.06em] text-[#111827] sm:text-[66px] lg:text-[74px]">
-                        A
-                      </span>
-                      <span className="-ml-2 text-[58px] font-medium tracking-[-0.08em] text-[#111827] sm:text-[66px] lg:text-[74px]">
-                        C
-                      </span>
-                    </div>
-
+                    
+                    {/* SYSTIA */}
                     <span
-                      className={`${monogramFont.className} mt-2 text-[24px] font-medium tracking-[-0.03em] text-[#0f172a] sm:text-[26px] lg:text-[28px]`}
+                      className={`
+                        ${monogramFont.className}
+                        text-[56px] font-medium
+                        tracking-[-0.08em]
+                        text-[#10224a]
+                        sm:text-[64px]
+                        lg:text-[72px]
+                      `}
                     >
-                      arnaudcrestey.com
+                      SYSTIA
+                    </span>
+
+                    {/* baseline */}
+                    <span
+                      className={`
+                        ${monogramFont.className}
+                        mt-2 text-[22px] font-medium
+                        tracking-[-0.035em]
+                        text-[#23345d]
+                        sm:text-[24px]
+                        lg:text-[26px]
+                      `}
+                    >
+                      Conception de systèmes d’activité
                     </span>
                   </div>
                 </Link>
@@ -45,8 +61,8 @@ export default function Footer() {
                 <p
                   className={`${monogramFont.className} mx-auto mt-5 max-w-[26rem] text-center text-[17px] italic leading-[1.7] text-[#5b6474] sm:max-w-[30rem] sm:text-[20px]`}
                 >
-                  <span className="block">Des systèmes numériques qui attirent, engagent</span>
-                  <span className="block">et transforment des visiteurs en clients.</span>
+                  <span className="block">Clarifier l’activité, structurer l’offre</span>
+                  <span className="block">et concevoir les dispositifs qui génèrent des demandes.</span>
                 </p>
               </div>
             </div>
@@ -62,37 +78,22 @@ export default function Footer() {
               </h3>
 
               <nav className="mt-5 flex flex-col items-center gap-4 md:items-start">
-  <Link
-    href="/"
-    className={`${textFont.className} text-[14px] text-[#475569] transition hover:text-[#1d4ed8] sm:text-[15px]`}
-  >
-    Accueil
-  </Link>
-  <Link
-    href="/systeme"
-    className={`${textFont.className} text-[14px] text-[#475569] transition hover:text-[#1d4ed8] sm:text-[15px]`}
-  >
-    Le système
-  </Link>
-  <Link
-    href="/concepts"
-    className={`${textFont.className} text-[14px] text-[#475569] transition hover:text-[#1d4ed8] sm:text-[15px]`}
-  >
-    Concepts
-  </Link>
-  <Link
-    href="/a-propos"
-    className={`${textFont.className} text-[14px] text-[#475569] transition hover:text-[#1d4ed8] sm:text-[15px]`}
-  >
-    À propos
-  </Link>
-  <Link
-    href="/tarifs"
-    className={`${textFont.className} text-[14px] text-[#475569] transition hover:text-[#1d4ed8] sm:text-[15px]`}
-  >
-    Tarifs
-  </Link>
-</nav>
+                <Link href="/" className={`${textFont.className} text-[14px] text-[#475569] transition hover:text-[#1d4ed8] sm:text-[15px]`}>
+                  Accueil
+                </Link>
+                <Link href="/systeme" className={`${textFont.className} text-[14px] text-[#475569] transition hover:text-[#1d4ed8] sm:text-[15px]`}>
+                  Le système
+                </Link>
+                <Link href="/concepts" className={`${textFont.className} text-[14px] text-[#475569] transition hover:text-[#1d4ed8] sm:text-[15px]`}>
+                  Concepts
+                </Link>
+                <Link href="/a-propos" className={`${textFont.className} text-[14px] text-[#475569] transition hover:text-[#1d4ed8] sm:text-[15px]`}>
+                  À propos
+                </Link>
+                <Link href="/tarifs" className={`${textFont.className} text-[14px] text-[#475569] transition hover:text-[#1d4ed8] sm:text-[15px]`}>
+                  Tarifs
+                </Link>
+              </nav>
             </div>
           </div>
 
@@ -108,11 +109,8 @@ export default function Footer() {
               <div
                 className={`${textFont.className} mt-6 flex flex-col items-center gap-5 text-[15px] text-[#334155] md:items-start`}
               >
-                <a
-                  href="mailto:demande@arnaudcrestey.com"
-                  className="break-all transition hover:text-[#1d4ed8]"
-                >
-                  demande@arnaudcrestey.com
+                <a href="mailto:contact@systia.fr" className="break-all transition hover:text-[#1d4ed8]">
+                  contact@systia.fr
                 </a>
 
                 <a href="tel:+33681952345" className="transition hover:text-[#1d4ed8]">
@@ -130,7 +128,7 @@ export default function Footer() {
           <div
             className={`${textFont.className} flex flex-col gap-3 text-center text-[14px] text-[#64748b] md:flex-row md:items-center md:justify-between md:text-left`}
           >
-            <p>© 2026 Arnaud Crestey. Tous droits réservés.</p>
+            <p>© 2026 SYSTIA. Tous droits réservés.</p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-end">
               <Link href="/mentions-legales" className="transition hover:text-[#1d4ed8]">
