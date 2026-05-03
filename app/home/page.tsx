@@ -45,7 +45,7 @@ export default async function HomePage() {
               </h2>
 
               <p className="mt-4 text-lg leading-8 text-slate">
-                Mon travail consiste à structurer cette expertise pour la rendre lisible, visible et
+                SYSTIA structure cette expertise pour la rendre lisible, visible et
                 capable de créer un mouvement naturel vers vous.
               </p>
             </div>
