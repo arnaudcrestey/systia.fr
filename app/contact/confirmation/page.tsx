@@ -25,7 +25,7 @@ export default function ContactConfirmationPage() {
               </p>
 
               <p className="mx-auto mt-3 max-w-[620px] text-[15px] leading-7 text-slate sm:mt-4 sm:text-base sm:leading-8">
-                Je reviendrai vers vous rapidement avec une réponse adaptée à votre besoin.
+                Une réponse adaptée à votre besoin vous sera apportée dans les meilleurs délais.
               </p>
 
               <div className="mx-auto mt-7 max-w-[640px] rounded-[20px] border border-[#dbe5ff] bg-white/72 px-4 py-4 text-sm leading-6 text-[#5f6b85] shadow-[0_14px_36px_rgba(37,99,235,0.05)] sm:mt-8 sm:rounded-[24px] sm:px-6 sm:text-[15px] sm:leading-7">
