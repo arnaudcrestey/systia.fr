@@ -267,7 +267,7 @@ export const reserveConcepts: ReserveConcept[] = [
 ];
 
 export const contactDetails = {
-  email: 'demande@arnaudcrestey.com',
+  email: 'contact@sysytia.fr',
   phone: '+33 6 81 95 23 45',
-  location: 'Vire, Normandie, France',
+  location: 'Normandie, France',
 };
