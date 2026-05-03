@@ -137,23 +137,4 @@ export default function EntryPage() {
       </section>
     </main>
   );
-}                    ${serif.className}
-                    mx-auto max-w-[360px] text-balance text-[1.02rem] leading-[1.75]
-                    tracking-[-0.016em] text-[#5d6f95]
-                    sm:max-w-[540px] sm:text-[1.13rem] sm:leading-[1.9]
-                    lg:max-w-[700px] lg:text-[1.17rem]
-                  `}
-                >
-                  Clarifier l’activité, structurer l’offre
-                  <br className="hidden sm:block" />
-                  <span className="sm:hidden"> </span>
-                  et concevoir les dispositifs qui génèrent des demandes.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-  );
-}
+}                    
