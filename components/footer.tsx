@@ -25,7 +25,7 @@ export default function Footer() {
             <div className="w-full max-w-[420px] md:max-w-[500px]">
               <div className="mx-auto flex flex-col items-center text-center">
 
-                <Link href="/home">
+                <Link href="/">
                   <div className="flex flex-col items-center leading-none">
 
                     <span
