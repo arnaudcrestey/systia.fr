@@ -192,9 +192,9 @@ Délai éventuel :`;
                 Contact
               </span>
 
-              <h1 className="mt-5 whitespace-nowrap text-[2.18rem] font-semibold tracking-[-0.065em] text-ink sm:mt-6 sm:text-5xl lg:text-6xl lg:leading-[1.02]">
-                Présenter une situation
-              </h1>
+              <h1 className="mt-5 whitespace-nowrap text-[clamp(1.6rem,7.2vw,2.18rem)] font-semibold leading-[1.05] tracking-[-0.045em] text-ink sm:mt-6 sm:text-5xl sm:tracking-[-0.06em] lg:text-6xl lg:leading-[1.02]">
+  Présenter une situation
+</h1>
 
               <p className="mt-4 max-w-3xl text-[15px] leading-7 text-slate sm:mt-5 sm:text-lg sm:leading-8">
                 Décrivez votre situation, votre besoin ou le dispositif à
