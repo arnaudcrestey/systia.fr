@@ -26,7 +26,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-[#d9def8]/80 bg-[#f8f9fe]/92 backdrop-blur-xl">
       <div className="container-layout relative flex h-24 items-center justify-center lg:h-20 lg:justify-between">
         <Link
-  href="/home"
+  href="/"
   className="group flex shrink-0 flex-col items-center text-center leading-none"
   aria-label="Retour à l’accueil SYSTIA"
 >
