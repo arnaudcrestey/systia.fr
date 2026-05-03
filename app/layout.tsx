@@ -7,7 +7,7 @@ import { SiteChrome } from '@/components/site-chrome';
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.systia.fr'),
   title: {
-    default: 'SYSTIA — Structuration de systèmes d’activité',
+    default: 'SYSTIA',
     template: '%s — SYSTIA',
   },
   description:
