@@ -3,27 +3,48 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import { Cormorant_Garamond, Inter } from 'next/font/google';
 
 import { navigation } from '@/data/site';
 import { ButtonLink } from '@/components/ui';
+
+const serif = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+});
 
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[#d9def8]/80 bg-[#f8f9fe]/86 backdrop-blur-xl">
-      <div className="container-layout flex h-20 items-center justify-between gap-5">
+    <header className="sticky top-0 z-50 border-b border-[#d9def8]/80 bg-[#f8f9fe]/92 backdrop-blur-xl">
+      <div className="container-layout relative flex h-24 items-center justify-center lg:h-20 lg:justify-between">
         <Link
           href="/home"
-          className="group flex shrink-0 flex-col leading-tight"
+          className="group flex flex-col items-center text-center leading-none lg:items-start lg:text-left"
           aria-label="Retour à l’accueil SYSTIA"
         >
-          <span className="text-[22px] font-semibold tracking-[0.16em] text-[#10224a] transition group-hover:text-[#1d4ed8] sm:text-[24px]">
+          <span
+            className={
+              serif.className +
+              " text-[42px] font-medium tracking-[-0.08em] text-[#10224a] transition group-hover:text-[#1d4ed8] sm:text-[48px] lg:text-[46px]"
+            }
+          >
             SYSTIA
           </span>
 
-          <span className="mt-1 max-w-[220px] text-[11px] font-medium tracking-[0.16em] text-[#6e7895] sm:max-w-none sm:text-[12px]">
+          <span
+            className={
+              serif.className +
+              " mt-1 text-[17px] font-medium tracking-[-0.035em] text-[#23345d] sm:text-[19px] lg:text-[18px]"
+            }
+          >
             Conception de systèmes d’activité
           </span>
         </Link>
@@ -37,11 +58,14 @@ export function Header() {
               <Link
                 key={item.href}
                 href={targetHref}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition duration-300 ease-premium ${
-                  active
-                    ? 'bg-[#10224a] text-white shadow-card'
-                    : 'text-[#5b6474] hover:bg-white hover:text-[#10224a]'
-                }`}
+                className={
+                  inter.className +
+                  ` rounded-full px-4 py-2 text-sm font-medium transition duration-300 ease-premium ${
+                    active
+                      ? 'bg-[#10224a] text-white shadow-card'
+                      : 'text-[#5b6474] hover:bg-white hover:text-[#10224a]'
+                  }`
+                }
               >
                 {item.label}
               </Link>
@@ -55,7 +79,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-full border border-[#d9def8] bg-white/90 p-3 text-[#10224a] shadow-[0_14px_34px_rgba(17,30,66,0.06)] transition hover:bg-white lg:hidden"
+          className="absolute right-5 inline-flex h-14 w-14 items-center justify-center rounded-full border border-[#d9def8] bg-white/92 text-[#10224a] shadow-[0_18px_40px_rgba(17,30,66,0.08)] transition hover:bg-white lg:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-expanded={open}
           aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
@@ -73,7 +97,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-[#d9def8] bg-[#f8f9fe]/95 lg:hidden">
+        <div className="border-t border-[#d9def8] bg-[#f8f9fe]/96 lg:hidden">
           <div className="container-layout flex flex-col gap-2 py-4">
             {navigation.map((item) => {
               const targetHref = item.href === '/' ? '/home' : item.href;
@@ -84,11 +108,14 @@ export function Header() {
                   key={item.href}
                   href={targetHref}
                   onClick={() => setOpen(false)}
-                  className={`rounded-2xl px-4 py-3 text-sm font-medium transition ${
-                    active
-                      ? 'bg-[#10224a] text-white'
-                      : 'bg-white/75 text-[#10224a] hover:bg-white'
-                  }`}
+                  className={
+                    inter.className +
+                    ` rounded-2xl px-4 py-3 text-center text-sm font-medium transition ${
+                      active
+                        ? 'bg-[#10224a] text-white'
+                        : 'bg-white/78 text-[#10224a] hover:bg-white'
+                    }`
+                  }
                 >
                   {item.label}
                 </Link>
