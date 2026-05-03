@@ -267,7 +267,7 @@ export const reserveConcepts: ReserveConcept[] = [
 ];
 
 export const contactDetails = {
-  email: 'contact@sysytia.fr',
+  email: 'contact@systia.fr',
   phone: '+33 6 81 95 23 45',
-  location: 'Normandie, France',
+  location: 'Vire, Normandie, France',
 };
