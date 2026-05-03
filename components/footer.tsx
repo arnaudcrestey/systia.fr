@@ -25,13 +25,13 @@ export default function Footer() {
             <div className="w-full max-w-[420px] md:max-w-[500px]">
               <div className="mx-auto flex flex-col items-center text-center">
 
-                <Link href="/">
+                <Link href="/" className="group">
                   <div className="flex flex-col items-center leading-none">
 
                     <span
                       className={
                         serif.className +
-                        " text-[56px] font-medium tracking-[-0.08em] text-[#10224a] sm:text-[64px] lg:text-[72px]"
+                        " text-[56px] font-medium tracking-[-0.08em] text-[#10224a] transition-colors duration-300 group-hover:text-[#1d4ed8] sm:text-[64px] lg:text-[72px]"
                       }
                     >
                       SYSTIA
@@ -40,7 +40,7 @@ export default function Footer() {
                     <span
                       className={
                         serif.className +
-                        " mt-2 text-[22px] font-medium tracking-[-0.035em] text-[#23345d] sm:text-[24px] lg:text-[26px]"
+                        " mt-2 text-[22px] font-medium tracking-[-0.035em] text-[#23345d] transition-colors duration-300 group-hover:text-[#1d4ed8] sm:text-[24px] lg:text-[26px]"
                       }
                     >
                       Conception de systèmes d’activité
@@ -51,7 +51,6 @@ export default function Footer() {
 
                 <div className="mt-5 h-px w-20 bg-[#d7dceb]" />
 
-                {/* TEXTE CORRIGÉ */}
                 <p
                   className={
                     serif.className +
