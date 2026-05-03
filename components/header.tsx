@@ -26,28 +26,28 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-[#d9def8]/80 bg-[#f8f9fe]/92 backdrop-blur-xl">
       <div className="container-layout relative flex h-24 items-center justify-center lg:h-20 lg:justify-between">
         <Link
-          href="/home"
-          className="group flex flex-col items-center text-center leading-none lg:items-start lg:text-left"
-          aria-label="Retour à l’accueil SYSTIA"
-        >
-          <span
-            className={
-              serif.className +
-              " text-[42px] font-medium tracking-[-0.08em] text-[#10224a] transition group-hover:text-[#1d4ed8] sm:text-[48px] lg:text-[46px]"
-            }
-          >
-            SYSTIA
-          </span>
+  href="/home"
+  className="group flex shrink-0 flex-col items-center text-center leading-none"
+  aria-label="Retour à l’accueil SYSTIA"
+>
+  <span
+    className={
+      serif.className +
+      " text-[42px] font-medium tracking-[-0.08em] text-[#10224a] transition group-hover:text-[#1d4ed8] sm:text-[48px] lg:text-[46px]"
+    }
+  >
+    SYSTIA
+  </span>
 
-          <span
-            className={
-              serif.className +
-              " mt-1 text-[17px] font-medium tracking-[-0.035em] text-[#23345d] sm:text-[19px] lg:text-[18px]"
-            }
-          >
-            Conception de systèmes d’activité
-          </span>
-        </Link>
+  <span
+    className={
+      serif.className +
+      " mt-1 text-center text-[17px] font-medium tracking-[-0.035em] text-[#23345d] sm:text-[19px] lg:text-[18px]"
+    }
+  >
+    Conception de systèmes d’activité
+  </span>
+</Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Navigation principale">
           {navigation.map((item) => {
