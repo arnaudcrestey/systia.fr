@@ -12,7 +12,7 @@ export default function AboutPage() {
     <div className="bg-[#F5F7FB]">
       <PageHero
         eyebrow="À propos"
-        title="Un cabinet conçu pour structurer une expertise et la transformer en demandes qualifiées."
+        title="Une approche conçue pour structurer une expertise et la transformer en demandes qualifiées."
         description={
           "SYSTIA conçoit des systèmes numériques simples, lisibles et crédibles pour rendre une activité plus claire, plus compréhensible et plus engageante.\nL’enjeu n’est pas seulement d’être visible, mais de construire un dispositif capable de créer les bonnes prises de contact."
         }
