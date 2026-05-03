@@ -192,7 +192,7 @@ Délai éventuel :`;
                 Contact
               </span>
 
-              <h1 className="mt-5 max-w-4xl text-[2.45rem] font-semibold tracking-[-0.06em] text-ink sm:mt-6 sm:text-5xl lg:text-6xl lg:leading-[1.02]">
+              <h1 className="mt-5 whitespace-nowrap text-[2.18rem] font-semibold tracking-[-0.065em] text-ink sm:mt-6 sm:text-5xl lg:text-6xl lg:leading-[1.02]">
                 Présenter une situation
               </h1>
 
@@ -253,13 +253,11 @@ Délai éventuel :`;
               </div>
 
               <div className="mt-8 rounded-[24px] border border-[#dbe4ff] bg-white/55 p-4 shadow-[0_14px_40px_rgba(72,102,170,0.04)] sm:mt-10 sm:rounded-[30px] sm:p-6">
-                <div className="flex flex-col gap-2">
-                  <p className="text-sm font-medium text-ink">
-                    Modèles de demande
-                  </p>
-                </div>
+                <p className="text-sm font-medium text-ink">
+                  Modèles de demande
+                </p>
 
-                <div className="mt-4 grid grid-cols-1 gap-2.5 sm:mt-5 sm:flex sm:flex-wrap sm:gap-3">
+                <div className="mt-4 grid grid-cols-1 gap-3 sm:mt-5 sm:grid-cols-2">
                   {messageTemplates.map((template) => {
                     const isActive =
                       selectedType === template.type &&
@@ -272,7 +270,7 @@ Délai éventuel :`;
                         onClick={() =>
                           handleSelectTemplate(template.content, template.type)
                         }
-                        className={`inline-flex min-h-[46px] items-center justify-center rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 ${
+                        className={`inline-flex min-h-[46px] w-full items-center justify-center rounded-full border px-4 py-2 text-center text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 ${
                           isActive
                             ? 'border-[#7ea2ff] bg-[#edf4ff] text-[#1d4ed8] shadow-[0_8px_20px_rgba(37,99,235,0.10)]'
                             : 'border-[#c9d7ff] bg-white/88 text-[#2d4ea1] hover:border-[#9db4ee] hover:bg-white hover:text-[#1d4ed8]'
@@ -286,14 +284,12 @@ Délai éventuel :`;
               </div>
 
               <div className="mt-8 sm:mt-9">
-                <div className="mb-3 flex flex-col gap-1">
-                  <label
-                    htmlFor="project-message"
-                    className="text-sm font-medium text-ink"
-                  >
-                    Votre demande
-                  </label>
-                </div>
+                <label
+                  htmlFor="project-message"
+                  className="mb-3 block text-sm font-medium text-ink"
+                >
+                  Votre demande
+                </label>
 
                 <div className="rounded-[24px] border border-[#a9c0fb] bg-white/88 p-3 shadow-[0_16px_42px_rgba(70,97,161,0.05)] sm:rounded-[30px] sm:p-4">
                   <textarea
