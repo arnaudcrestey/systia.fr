@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Le système | Arnaud Crestey',
   description:
-    "Exemple concret : comment Arnaud Crestey a transformé une demande initiale en système complet pour structurer et lancer Cabinet Astraé.",
+    "Exemple concret : comment une demande initiale a été transformée en système complet pour structurer et lancer Cabinet Astraé.",
 };
 
 const proofBlocks = [
@@ -193,8 +193,8 @@ export default function SystemePage() {
 
                 <p className="mt-4 text-base leading-7 text-slate">
                   La relation avec les clients est ensuite portée au sein du
-                  Cabinet Astraé. Ici, j’ai conçu l’architecture, les outils,
-                  les supports et les logiques qui permettent à l’activité de
+                  Cabinet Astraé. L’architecture, les outils,
+                  les supports et les logiques ont été conçus pour permettre à l’activité de
                   fonctionner avec plus de clarté, de cohérence et de solidité.
                 </p>
 
