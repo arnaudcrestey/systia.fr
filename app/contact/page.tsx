@@ -18,55 +18,55 @@ const messageTemplates: {
   content: string;
 }[] = [
   {
-    label: 'Créer un point d’entrée',
+    label: 'Conception d’un point d’entrée',
     type: 'point-entree',
-    content: `Bonjour Arnaud,
+    content: `Bonjour,
 
-Je souhaite créer un point d’entrée pour mon activité.
+Je souhaite présenter une demande concernant la conception d’un point d’entrée.
 
-Mon activité :
-Mon rôle / statut (coach, thérapeute, indépendant, entreprise...) :
-Mon besoin :
-L’objectif recherché :
+Activité :
+Rôle / statut :
+Besoin identifié :
+Objectif recherché :
 Contexte ou éléments utiles :`,
   },
   {
-    label: 'Clarifier mon positionnement',
+    label: 'Clarification du positionnement',
     type: 'clarification',
-    content: `Bonjour Arnaud,
+    content: `Bonjour,
 
-Je souhaite clarifier mon positionnement et mieux structurer mon offre.
+Je souhaite présenter une situation liée à la clarification de mon positionnement.
 
-Mon activité :
-Mon rôle / statut :
-Ma situation actuelle :
-Ce que je souhaite améliorer :
+Activité :
+Rôle / statut :
+Situation actuelle :
+Ce qui semble manquer de clarté :
 Contexte ou éléments utiles :`,
   },
   {
-    label: 'Automatiser un parcours',
+    label: 'Automatisation d’un parcours',
     type: 'automatisation',
-    content: `Bonjour Arnaud,
+    content: `Bonjour,
 
-Je souhaite automatiser une partie de mon activité ou de mon parcours client.
+Je souhaite présenter une demande concernant l’automatisation d’un parcours ou d’un processus.
 
-Mon activité :
-Mon rôle / statut :
-Le processus à automatiser :
-Le résultat attendu :
+Activité :
+Rôle / statut :
+Parcours ou processus concerné :
+Résultat attendu :
 Contexte ou éléments utiles :`,
   },
   {
-    label: 'Structurer mon activité',
+    label: 'Structuration d’activité',
     type: 'structurer-activite',
-    content: `Bonjour Arnaud,
+    content: `Bonjour,
 
-Je souhaite structurer mon activité.
+Je souhaite présenter une situation liée à la structuration de mon activité.
 
-Mon activité :
-Mon rôle / statut :
-Ma situation actuelle :
-Ce que je souhaite clarifier ou structurer :
+Activité :
+Rôle / statut :
+Situation actuelle :
+Ce qui doit être clarifié ou structuré :
 Contexte ou éléments utiles :`,
   },
 ];
@@ -83,11 +83,14 @@ export default function ContactPage() {
   const [errorMessage, setErrorMessage] = useState('');
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const placeholderMessage = `Bonjour Arnaud,
+  const placeholderMessage = `Bonjour,
 
-Je souhaite vous parler de mon projet...
+Je souhaite présenter une situation.
 
-Vous pouvez préciser votre activité, votre besoin, le contexte et votre délai éventuel.`;
+Activité :
+Besoin :
+Contexte :
+Délai éventuel :`;
 
   const handleSelectTemplate = (content: string, type: ContactType) => {
     setMessage(content);
@@ -166,7 +169,9 @@ Vous pouvez préciser votre activité, votre besoin, le contexte et votre délai
     } catch (error) {
       console.error(error);
       setStatus('error');
-      setErrorMessage("Impossible d’envoyer votre message pour le moment. Merci de réessayer dans un instant.");
+      setErrorMessage(
+        "Impossible d’envoyer votre demande pour le moment. Merci de réessayer dans un instant."
+      );
     } finally {
       setIsSending(false);
     }
@@ -188,12 +193,13 @@ Vous pouvez préciser votre activité, votre besoin, le contexte et votre délai
               </span>
 
               <h1 className="mt-5 max-w-4xl text-[2.45rem] font-semibold tracking-[-0.06em] text-ink sm:mt-6 sm:text-5xl lg:text-6xl lg:leading-[1.02]">
-                Parlons de votre projet
+                Présenter une situation
               </h1>
 
               <p className="mt-4 max-w-3xl text-[15px] leading-7 text-slate sm:mt-5 sm:text-lg sm:leading-8">
-                Décrivez simplement votre besoin, votre idée ou le dispositif que vous souhaitez
-                concevoir.
+                Décrivez votre situation, votre besoin ou le dispositif à
+                concevoir. Chaque demande est abordée à partir de son contexte,
+                de ses enjeux et de son niveau de structuration.
               </p>
 
               <div className="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2">
@@ -204,6 +210,7 @@ Vous pouvez préciser votre activité, votre besoin, le contexte et votre délai
                   >
                     Nom et prénom
                   </label>
+
                   <input
                     id="contact-full-name"
                     type="text"
@@ -227,6 +234,7 @@ Vous pouvez préciser votre activité, votre besoin, le contexte et votre délai
                   >
                     Votre email
                   </label>
+
                   <input
                     id="contact-email"
                     type="email"
@@ -247,20 +255,23 @@ Vous pouvez préciser votre activité, votre besoin, le contexte et votre délai
               <div className="mt-8 rounded-[24px] border border-[#dbe4ff] bg-white/55 p-4 shadow-[0_14px_40px_rgba(72,102,170,0.04)] sm:mt-10 sm:rounded-[30px] sm:p-6">
                 <div className="flex flex-col gap-2">
                   <p className="text-sm font-medium text-ink">
-                    Vous pouvez utiliser un modèle de message
+                    Modèles de demande
                   </p>
                 </div>
 
                 <div className="mt-4 grid grid-cols-1 gap-2.5 sm:mt-5 sm:flex sm:flex-wrap sm:gap-3">
                   {messageTemplates.map((template) => {
                     const isActive =
-                      selectedType === template.type && message === template.content;
+                      selectedType === template.type &&
+                      message === template.content;
 
                     return (
                       <button
                         key={template.label}
                         type="button"
-                        onClick={() => handleSelectTemplate(template.content, template.type)}
+                        onClick={() =>
+                          handleSelectTemplate(template.content, template.type)
+                        }
                         className={`inline-flex min-h-[46px] items-center justify-center rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 ${
                           isActive
                             ? 'border-[#7ea2ff] bg-[#edf4ff] text-[#1d4ed8] shadow-[0_8px_20px_rgba(37,99,235,0.10)]'
@@ -276,8 +287,11 @@ Vous pouvez préciser votre activité, votre besoin, le contexte et votre délai
 
               <div className="mt-8 sm:mt-9">
                 <div className="mb-3 flex flex-col gap-1">
-                  <label htmlFor="project-message" className="text-sm font-medium text-ink">
-                    Votre message
+                  <label
+                    htmlFor="project-message"
+                    className="text-sm font-medium text-ink"
+                  >
+                    Votre demande
                   </label>
                 </div>
 
@@ -305,7 +319,7 @@ Vous pouvez préciser votre activité, votre besoin, le contexte et votre délai
                   disabled={isDisabled}
                   className="inline-flex min-h-12 w-full max-w-[280px] items-center justify-center rounded-full bg-[#2563eb] px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(37,99,235,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1d4ed8] active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  {isSending ? 'Envoi en cours...' : 'Envoyer votre message'}
+                  {isSending ? 'Envoi en cours...' : 'Envoyer la demande'}
                 </button>
               </div>
 
@@ -324,7 +338,7 @@ Vous pouvez préciser votre activité, votre besoin, le contexte et votre délai
                   className="break-words transition-colors duration-200 hover:text-ink"
                 >
                   {contactDetails.email}
-                </a>                
+                </a>
               </div>
             </div>
           </div>
