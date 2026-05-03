@@ -89,9 +89,7 @@ export default function EntryPage() {
                   lg:text-[2.15rem]
                 `}
               >
-                Structuration et conception
-                <br />
-                de systèmes d’activité.
+                Conception de systèmes d’activité.
               </p>
 
               <div className="mt-10">
