@@ -63,7 +63,7 @@ export default function EntryPage() {
                   sm:text-[0.78rem]
                 "
               >
-                Structuration d’activité
+                Structuration d’activités
               </p>
 
               <h1
@@ -89,7 +89,7 @@ export default function EntryPage() {
                   lg:text-[2.15rem]
                 `}
               >
-                Conception de systèmes d’activité.
+                Conception de systèmes d’activité
               </p>
 
               <div className="mt-10">
