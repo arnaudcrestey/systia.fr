@@ -12,18 +12,19 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/70 bg-white/78 backdrop-blur-xl">
-      <div className="container-layout flex h-20 items-center justify-between gap-6">
+    <header className="sticky top-0 z-50 border-b border-[#d9def8]/80 bg-[#f8f9fe]/86 backdrop-blur-xl">
+      <div className="container-layout flex h-20 items-center justify-between gap-5">
         <Link
           href="/home"
-          className="group flex shrink-0 flex-col items-center text-center leading-tight"
-          aria-label="Retour à l’accueil"
+          className="group flex shrink-0 flex-col leading-tight"
+          aria-label="Retour à l’accueil SYSTIA"
         >
-          <span className="text-[16px] font-medium tracking-[0.08em] text-ink transition group-hover:text-primary sm:text-[18px]">
-            Arnaud Crestey
+          <span className="text-[22px] font-semibold tracking-[0.16em] text-[#10224a] transition group-hover:text-[#1d4ed8] sm:text-[24px]">
+            SYSTIA
           </span>
-          <span className="mt-1 text-[12px] tracking-[0.12em] text-slate/80 sm:text-sm">
-            Concepteur de systèmes numériques
+
+          <span className="mt-1 max-w-[220px] text-[11px] font-medium tracking-[0.16em] text-[#6e7895] sm:max-w-none sm:text-[12px]">
+            Conception de systèmes d’activité
           </span>
         </Link>
 
@@ -38,8 +39,8 @@ export function Header() {
                 href={targetHref}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition duration-300 ease-premium ${
                   active
-                    ? 'bg-ink text-white shadow-card'
-                    : 'text-slate hover:bg-white hover:text-ink'
+                    ? 'bg-[#10224a] text-white shadow-card'
+                    : 'text-[#5b6474] hover:bg-white hover:text-[#10224a]'
                 }`}
               >
                 {item.label}
@@ -54,7 +55,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-full border border-line bg-white/90 p-3 text-ink lg:hidden"
+          className="inline-flex items-center justify-center rounded-full border border-[#d9def8] bg-white/90 p-3 text-[#10224a] shadow-[0_14px_34px_rgba(17,30,66,0.06)] transition hover:bg-white lg:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-expanded={open}
           aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
@@ -72,7 +73,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-line lg:hidden">
+        <div className="border-t border-[#d9def8] bg-[#f8f9fe]/95 lg:hidden">
           <div className="container-layout flex flex-col gap-2 py-4">
             {navigation.map((item) => {
               const targetHref = item.href === '/' ? '/home' : item.href;
@@ -83,8 +84,10 @@ export function Header() {
                   key={item.href}
                   href={targetHref}
                   onClick={() => setOpen(false)}
-                  className={`rounded-2xl px-4 py-3 text-sm font-medium ${
-                    active ? 'bg-ink text-white' : 'bg-white/70 text-ink'
+                  className={`rounded-2xl px-4 py-3 text-sm font-medium transition ${
+                    active
+                      ? 'bg-[#10224a] text-white'
+                      : 'bg-white/75 text-[#10224a] hover:bg-white'
                   }`}
                 >
                   {item.label}
