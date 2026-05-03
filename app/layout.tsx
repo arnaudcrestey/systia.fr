@@ -5,27 +5,30 @@ import './globals.css';
 import { SiteChrome } from '@/components/site-chrome';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://arnaudcrestey.com'),
+  metadataBase: new URL('https://www.systia.fr'),
   title: {
-    default: 'arnaudcrestey.com — systèmes numériques premium au service de l’humain',
-    template: '%s — arnaudcrestey.com',
+    default: 'SYSTIA — Structuration de systèmes d’activité',
+    template: '%s — SYSTIA',
   },
   description:
-    'Arnaud Crestey conçoit des diagnostics interactifs, mini-sites, automatisations et expériences digitales premium pour les particuliers et les professionnels.',
+    'SYSTIA structure, clarifie et conçoit des systèmes numériques sobres, utiles et durables pour les activités professionnelles.',
   openGraph: {
-    title: 'arnaudcrestey.com',
+    title: 'SYSTIA — Structuration de systèmes d’activité',
     description:
-      'Un portail premium pour présenter Cabinet Astrae, les solutions de diagnostics et automatisations, et un laboratoire de concepts digitaux.',
-    url: 'https://arnaudcrestey.com',
-    siteName: 'arnaudcrestey.com',
+      'Structuration, clarification et conception de systèmes numériques au service des activités professionnelles.',
+    url: 'https://www.systia.fr',
+    siteName: 'SYSTIA',
     locale: 'fr_FR',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'arnaudcrestey.com',
+    title: 'SYSTIA — Structuration de systèmes d’activité',
     description:
-      'Des systèmes digitaux utiles, élégants et crédibles au service de l’humain et de la transformation.',
+      'Des systèmes numériques sobres, structurés et durables pour clarifier et développer une activité professionnelle.',
+  },
+  alternates: {
+    canonical: 'https://www.systia.fr',
   },
 };
 
