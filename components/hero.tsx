@@ -25,7 +25,7 @@ export function HomeHero({ metrics }: HomeHeroProps) {
 </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-center text-[15px] leading-7 text-slate sm:max-w-2xl sm:text-lg sm:leading-8 lg:mx-0 lg:text-left lg:text-[1.15rem] lg:leading-8">
-            J’aide les professionnels dont l’activité repose sur une expertise à la
+            SYSTIA accompagne les professionnels dont l’activité repose sur une expertise à la
             clarifier, la structurer dans la durée, puis à concevoir les dispositifs
             digitaux adaptés pour attirer et engager les bons clients.
           </p>
@@ -97,12 +97,17 @@ export function HomeHero({ metrics }: HomeHeroProps) {
               </div>
 
               <div className="border-t border-[#e7eafb] bg-[#f7f8fe] px-5 py-5 sm:px-6 sm:py-6">
-                <p className="text-[15px] font-medium tracking-[0.04em] text-ink sm:text-[16px]">
-                  Arnaud Crestey
-                </p>
-              </div>
-            </div>
-          </Surface>
+  <div className="flex flex-col leading-tight">
+    <p className="text-[15px] font-medium tracking-[0.04em] text-ink sm:text-[16px]">
+      Arnaud Crestey
+    </p>
+    <p className="mt-1 text-[12px] tracking-[0.12em] text-slate/80 sm:text-[13px]">
+      Fondateur SYSTIA
+    </p>
+  </div>
+</div>
+</div>
+</Surface>
 
           <dl className="grid gap-4 sm:grid-cols-3">
             {[
