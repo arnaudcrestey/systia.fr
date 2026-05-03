@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <footer className="mt-20 border-t border-[#d9def8] bg-[linear-gradient(180deg,#ffffff_0%,#f7f9fe_100%)]">
       <div className="mx-auto max-w-6xl px-5 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-        <div className="grid gap-12 sm:gap-14 md:grid-cols-[minmax(0,1.35fr)_180px_220px] md:items-start md:justify-between md:gap-16">
+        <div className="grid gap-12 sm:gap-14 md:grid-cols-[minmax(0,1.35fr)_180px_220px] md:items-start md:justify-between md:gap-16">-12 sm:gap-14 md:grid-cols-[minmax(0,1.35fr)_180px_220px] md:items-start md:justify-between md:gap-16">
           
           {/* Bloc gauche */}
           <div className="flex justify-center md:justify-start">
