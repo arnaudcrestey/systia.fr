@@ -102,7 +102,7 @@ export function HomeHero({ metrics }: HomeHeroProps) {
       Arnaud Crestey
     </p>
     <p className="mt-1 text-[12px] tracking-[0.12em] text-slate/80 sm:text-[13px]">
-      Fondateur SYSTIA
+      Fondateur de SYSTIA
     </p>
   </div>
 </div>
