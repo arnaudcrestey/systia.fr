@@ -28,9 +28,7 @@ function extractFirstName(fullName?: string) {
   if (!cleaned) return "";
 
   const parts = cleaned.split(" ").filter(Boolean);
-  if (parts.length === 0) return "";
-
-  return parts[0];
+  return parts[0] ?? "";
 }
 
 function buildAdminEmail({
@@ -153,19 +151,25 @@ function buildClientEmail({ firstName }: { firstName?: string }) {
                 </div>
 
                 <div style="margin-top:34px; padding-top:28px; border-top:1px solid #d9e3f2; text-align:center;">
-                  <p style="margin:0 0 16px 0; font-size:16px; color:#4c5d78;">
+                  <p style="margin:0 0 18px 0; font-size:16px; color:#4c5d78;">
                     Bien à vous,
                   </p>
 
-                  <div style="font-family:Georgia, 'Times New Roman', serif; font-size:44px; line-height:1; color:#1c4fa3; margin-bottom:8px;">
-                    AC
+                  <div style="font-family:Georgia, 'Times New Roman', serif; font-size:46px; line-height:1; letter-spacing:-1px; color:#14213d; margin-bottom:10px;">
+                    SYSTIA
                   </div>
 
+                  <div style="font-family:Georgia, 'Times New Roman', serif; font-size:18px; line-height:1.4; color:#14213d; margin-bottom:14px;">
+                    Conception de systèmes d’activité
+                  </div>
+
+                  <div style="width:78px; height:1px; background:#c8d2e4; margin:0 auto 16px auto;"></div>
+
                   <a
-                    href="https://arnaudcrestey.com"
-                    style="font-size:14px; color:#1c4fa3; text-decoration:underline;"
+                    href="https://www.systia.fr"
+                    style="font-size:14px; color:#14213d; text-decoration:underline;"
                   >
-                    arnaudcrestey.com
+                    www.systia.fr
                   </a>
                 </div>
               </td>
@@ -205,9 +209,9 @@ export async function POST(req: Request) {
 
     /* ========= EMAIL ADMIN ========= */
     await transporter.sendMail({
-      from: `"Site" <${process.env.EMAIL_USER}>`,
+      from: `"Site SYSTIA" <${process.env.EMAIL_USER}>`,
       to: process.env.CONTACT_TO_EMAIL,
-      subject: "Nouveau message",
+      subject: "Nouveau message SYSTIA",
       text: `Nouveau message reçu
 
 Nom et prénom : ${safeFullName || "Non renseigné"}
@@ -224,7 +228,7 @@ ${safeMessage}`,
 
     /* ========= EMAIL CLIENT ========= */
     await transporter.sendMail({
-      from: `"Arnaud Crestey" <${process.env.EMAIL_USER}>`,
+      from: `"SYSTIA" <${process.env.EMAIL_USER}>`,
       to: safeEmail,
       subject: "Votre message a bien été reçu",
       text: `${safeFirstName ? `Bonjour ${safeFirstName},` : "Bonjour,"}
@@ -238,7 +242,10 @@ Je reviens vers vous rapidement avec une réponse claire et structurée.
 Chaque demande est analysée avec attention afin d’apporter une réponse réellement utile.
 
 Bien à vous,
-arnaudcrestey.com`,
+
+SYSTIA
+Conception de systèmes d’activité
+www.systia.fr`,
       html: buildClientEmail({
         firstName: safeFirstName,
       }),
@@ -253,7 +260,8 @@ arnaudcrestey.com`,
       process.env.SUPABASE_SERVICE_ROLE_KEY?.slice(0, 12)
     );
 
-    const { data: metricData, error: metricError } = await supabaseAdmin.rpc("increment_leads");
+    const { data: metricData, error: metricError } =
+      await supabaseAdmin.rpc("increment_leads");
 
     if (metricError) {
       console.error("[CONTACT] Erreur increment_leads :", {
