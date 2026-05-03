@@ -71,7 +71,7 @@ export default function ConceptsPage() {
         }}
         secondaryCta={{
           href: '/contact',
-          label: 'Me parler d’un projet digital',
+          label: 'Faire une demande',
         }}
       />
 
