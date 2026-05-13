@@ -1,10 +1,9 @@
-import { ProjectShowcaseCard, ReserveConceptCard } from '@/components/cards';
+import { ProjectShowcaseCard } from '@/components/cards';
 import { PageHero } from '@/components/page-hero';
 import { SectionHeading, Surface } from '@/components/ui';
 import {
   conceptProjects,
   featuredLabProject,
-  reserveConcepts,
   strategicEntryPoints,
 } from '@/data/site';
 
