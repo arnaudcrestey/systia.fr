@@ -197,24 +197,30 @@ export default function ConceptsPage() {
       </section>
 
       <section className="section-spacing pt-4">
-        <div className="container-layout">
-          <SectionHeading
-            eyebrow="Réserve créative"
-            title="Pistes complémentaires en cours de développement"
-            description="Des concepts déjà structurés pour prolonger le système, explorer d’autres angles d’entrée et enrichir progressivement les possibilités."
-          />
+  <div className="container-layout">
+    <Surface className="relative overflow-hidden px-6 py-10 sm:px-8 sm:py-12">
+      <div className="absolute inset-0 bg-hero-radial opacity-70" />
 
-          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {reserveConcepts.map((concept) => (
-              <div key={concept.title} className="relative">
-                <StatusDot variant="concept" />
-                <ReserveConceptCard concept={concept} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="relative mx-auto max-w-3xl text-center">
+        <span className="section-eyebrow">
+          Possibilités évolutives
+        </span>
 
+        <h2 className="mt-4 text-balance text-3xl font-semibold leading-tight sm:text-4xl">
+          Chaque activité peut concevoir son propre point d’entrée
+        </h2>
+
+        <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-muted-foreground sm:text-base">
+          Il n’existe pas de modèle unique.
+          Chaque dispositif peut être imaginé, adapté ou développé selon
+          une problématique, un métier, un public ou une manière spécifique
+          d’entrer en relation.
+        </p>
+      </div>
+    </Surface>
+  </div>
+</section>
+      
       <section className="section-spacing pt-4">
         <div className="container-layout">
           <Surface className="relative overflow-hidden px-6 py-12 sm:px-10 sm:py-14 lg:px-14 lg:py-16">
