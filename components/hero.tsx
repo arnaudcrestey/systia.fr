@@ -25,7 +25,7 @@ export function HomeHero({ metrics }: HomeHeroProps) {
 </h1>
 
           <p className="mx-auto mt-6 max-w-xl text-center text-[15px] leading-7 text-slate sm:max-w-2xl sm:text-lg sm:leading-8 lg:mx-0 lg:text-left lg:text-[1.15rem] lg:leading-8">
-            SYSTIA accompagne les professionnels dont l’activité repose sur une expertise à la
+            SYSTIA accompagne les professionnels dont l’activité repose sur une expertise, à la
             clarifier, la structurer dans la durée, puis à concevoir les dispositifs
             digitaux adaptés pour attirer et engager les bons clients.
           </p>
