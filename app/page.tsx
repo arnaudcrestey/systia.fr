@@ -94,20 +94,23 @@ export default function EntryPage() {
 
               <div className="mt-8 sm:mt-10">
                 <Link
-                  href="/home"
-                  className={`
-                    ${serif.className}
-                    group relative inline-flex min-w-[164px] items-center justify-center overflow-hidden rounded-[17px]
-                    border border-[#d8e0f5]
-                    bg-[linear-gradient(180deg,#ffffff_0%,#f2f5fb_100%)]
-                    px-7 py-3 text-[1.55rem] font-medium leading-none tracking-[-0.03em] text-[#213763]
-                    shadow-[0_22px_46px_rgba(17,30,66,0.065),0_10px_22px_rgba(17,30,66,0.03),inset_0_1px_0_rgba(255,255,255,1)]
-                    transition-all duration-500
-                    hover:-translate-y-[2px] hover:scale-[1.02]
-                    hover:shadow-[0_30px_58px_rgba(17,30,66,0.085),0_14px_30px_rgba(17,30,66,0.04),inset_0_1px_0_rgba(255,255,255,1)]
-                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5d0ee] focus-visible:ring-offset-2 focus-visible:ring-offset-[#f4f6fb]
-                    sm:min-w-[220px] sm:rounded-[20px] sm:px-10 sm:py-4 sm:text-[clamp(1.75rem,6vw,2.12rem)]
-                  `}
+  href="/home"
+  prefetch
+  className={`
+    ${serif.className}
+    group relative inline-flex min-w-[164px] items-center justify-center overflow-hidden rounded-[17px]
+    border border-[#d8e0f5]
+    bg-[linear-gradient(180deg,#ffffff_0%,#f2f5fb_100%)]
+    px-7 py-3 text-[1.55rem] font-medium leading-none tracking-[-0.03em] text-[#213763]
+    shadow-[0_22px_46px_rgba(17,30,66,0.065),0_10px_22px_rgba(17,30,66,0.03),inset_0_1px_0_rgba(255,255,255,1)]
+    transition-all duration-300
+    hover:-translate-y-[2px] hover:scale-[1.02]
+    active:scale-[0.98]
+    hover:shadow-[0_30px_58px_rgba(17,30,66,0.085),0_14px_30px_rgba(17,30,66,0.04),inset_0_1px_0_rgba(255,255,255,1)]
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c5d0ee] focus-visible:ring-offset-2 focus-visible:ring-offset-[#f4f6fb]
+    sm:min-w-[220px] sm:rounded-[20px] sm:px-10 sm:py-4 sm:text-[clamp(1.75rem,6vw,2.12rem)]
+  `}
+>
                 >
                   <span className="absolute inset-[1px] rounded-[16px] bg-[linear-gradient(180deg,rgba(255,255,255,0.86)_0%,rgba(255,255,255,0.28)_100%)] sm:rounded-[19px]" />
                   <span className="absolute -bottom-4 left-1/2 h-7 w-[72%] -translate-x-1/2 rounded-full bg-[rgba(117,132,180,0.14)] blur-xl transition-all duration-500 group-hover:w-[78%]" />
