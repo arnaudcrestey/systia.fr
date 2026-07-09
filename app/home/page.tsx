@@ -1,38 +1,12 @@
-import { createClient } from '@supabase/supabase-js';
-import { DeviceCard } from '@/components/cards';
-import { HomeHero } from '@/components/hero';
-import { Surface } from '@/components/ui';
-import { deviceExamples } from '@/data/site';
+import { DeviceCard } from "@/components/cards";
+import { HomeHero } from "@/components/hero";
+import { Surface } from "@/components/ui";
+import { deviceExamples } from "@/data/site";
 
-export const dynamic = 'force-dynamic';
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!,
-  {
-    auth: {
-      persistSession: false,
-      autoRefreshToken: false,
-    },
-  }
-);
-
-export default async function HomePage() {
-  const { data } = await supabase
-    .from('site_metrics')
-    .select('visitors_30d, leads_generated, active_entry_points')
-    .eq('id', 1)
-    .single();
-
-  const metrics = {
-    visitors30d: data?.visitors_30d ?? 0,
-    leadsGenerated: data?.leads_generated ?? 0,
-    activeEntryPoints: data?.active_entry_points ?? 0,
-  };
-
+export default function HomePage() {
   return (
     <>
-      <HomeHero metrics={metrics} />
+      <HomeHero />
 
       <section className="section-spacing pb-6 pt-4">
         <div className="container-layout">
@@ -41,12 +15,13 @@ export default async function HomePage() {
               <span className="section-eyebrow">Constat</span>
 
               <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-                Votre expertise existe déjà. Mais elle ne travaille pas encore pour vous.
+                Votre expertise existe déjà. Mais elle ne travaille pas encore
+                pour vous.
               </h2>
 
               <p className="mt-4 text-lg leading-8 text-slate">
-                SYSTIA structure cette expertise pour la rendre lisible, visible et
-                capable de créer un mouvement naturel vers vous.
+                SYSTIA structure cette expertise pour la rendre lisible, visible
+                et capable de créer un mouvement naturel vers vous.
               </p>
             </div>
           </div>
@@ -61,7 +36,9 @@ export default async function HomePage() {
 
               <h2 className="mt-4 text-2xl font-semibold tracking-tight text-ink sm:text-3xl lg:text-4xl">
                 <span className="block">Des dispositifs concrets,</span>
-                <span className="block">pensés pour générer des résultats.</span>
+                <span className="block">
+                  pensés pour générer des résultats.
+                </span>
               </h2>
             </div>
 
