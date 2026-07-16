@@ -104,6 +104,38 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "SYSTIA",
+      url: siteUrl,
+      logo: `${siteUrl}/icon.png`,
+      image: `${siteUrl}/opengraph-image.jpg`,
+      description:
+        "SYSTIA structure, clarifie et conçoit des systèmes numériques sobres, utiles et durables pour les activités professionnelles.",
+      founder: {
+        "@type": "Person",
+        name: "Arnaud Crestey",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "SYSTIA",
+      description:
+        "Structuration, clarification et conception de systèmes numériques au service des activités professionnelles.",
+      inLanguage: "fr-FR",
+      publisher: {
+        "@id": `${siteUrl}/#organization`,
+      },
+    },
+  ],
+};
+
 type RootLayoutProps = Readonly<{
   children: ReactNode;
 }>;
@@ -113,6 +145,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="fr">
       <body>
         <SiteChrome>{children}</SiteChrome>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+          }}
+        />
       </body>
     </html>
   );
