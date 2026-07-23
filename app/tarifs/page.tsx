@@ -13,7 +13,7 @@ const pricingItems: PricingItem[] = [
   {
     title: 'Cadrage stratégique',
     subtitle: 'Clarifier avant d’agir',
-    amount: '790',
+    amount: '190',
     description:
       'Un temps de travail structuré pour prendre du recul, clarifier votre situation, faire ressortir les priorités et définir la direction la plus juste.',
     details: [
@@ -26,21 +26,21 @@ const pricingItems: PricingItem[] = [
   {
     title: 'Point d’entrée sur mesure',
     subtitle: 'Le premier levier concret',
-    amount: '2 500',
+    amount: '790',
     description:
       'Un dispositif conçu pour structurer votre expertise, attirer les bonnes personnes et créer des prises de contact plus qualifiées.',
     details: [
-      'Conception du point d’entrée',
+      'Cadrage stratégique',
       'Structure du parcours utilisateur',
       'Logique de conversion cohérente',
-      'Alignement entre fond, forme et objectif',
+      'Conception du point d’entrée',
     ],
     featured: true,
   },
   {
     title: 'Système complet',
     subtitle: 'Structurer durablement votre activité',
-    amount: '6 500',
+    amount: '2590',
     description:
       'Un système plus global pour organiser votre acquisition, votre parcours client et la cohérence d’ensemble de votre dispositif.',
     details: [
