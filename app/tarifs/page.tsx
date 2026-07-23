@@ -7,6 +7,9 @@ type PricingItem = {
   description: string;
   details: string[];
   featured?: boolean;
+  startingFrom?: boolean;
+  progression?: string;
+  progressionLabel?: string;
 };
 
 const pricingItems: PricingItem[] = [
@@ -22,34 +25,41 @@ const pricingItems: PricingItem[] = [
       'Recommandation claire et exploitable',
       'Vision du dispositif à envisager',
     ],
+    progression: '190 €',
+    progressionLabel: 'Première étape',
   },
   {
     title: 'Point d’entrée sur mesure',
-    subtitle: 'Le premier levier concret',
+    subtitle: 'Construire votre premier dispositif',
     amount: '790',
     description:
       'Un dispositif conçu pour structurer votre expertise, attirer les bonnes personnes et créer des prises de contact plus qualifiées.',
     details: [
-      'Cadrage stratégique',
+      'Cadrage stratégique inclus',
       'Structure du parcours utilisateur',
       'Logique de conversion cohérente',
       'Conception du point d’entrée',
     ],
     featured: true,
+    progression: '+ 600 €',
+    progressionLabel: 'Après le cadrage',
   },
   {
     title: 'Système complet',
     subtitle: 'Structurer durablement votre activité',
-    amount: '2590',
+    amount: '2 590',
     description:
-      'Un système plus global pour organiser votre acquisition, votre parcours client et la cohérence d’ensemble de votre dispositif.',
+      'Un système plus global pour organiser votre acquisition, votre parcours client et la cohérence d’ensemble de votre dispositif numérique.',
     details: [
-      'Pilotage global du dispositif',
-      'Point d’entrée + parcours complet',
+      'Cadrage stratégique inclus',
+      'Point d’entrée sur mesure inclus',
+      'Site et parcours utilisateur complet',
       'Automatisations et continuité du suivi',
-      'Adaptation à votre activité',
-      'Vision d’ensemble plus avancée',
+      'Adaptation globale à votre activité',
     ],
+    startingFrom: true,
+    progression: '+ 1 800 €',
+    progressionLabel: 'Après le point d’entrée',
   },
 ];
 
@@ -59,13 +69,21 @@ export const metadata = {
     'Formats, tarifs et accompagnements sur mesure pour la conception de systèmes numériques premium.',
 };
 
-function PriceDisplay({ amount }: { amount: string }) {
+function PriceDisplay({
+  amount,
+  startingFrom,
+}: {
+  amount: string;
+  startingFrom?: boolean;
+}) {
   return (
     <div className="mt-6 flex items-end">
       <div className="flex min-w-0 flex-wrap items-end gap-x-2 gap-y-1">
         <span className="whitespace-nowrap text-[31px] font-semibold tracking-[-0.045em] text-ink sm:text-[34px] lg:text-[35px]">
-          À partir de {amount} €
+          {startingFrom ? 'À partir de ' : ''}
+          {amount} €
         </span>
+
         <span className="pb-[6px] text-[10px] font-semibold uppercase tracking-[0.18em] text-slate/60 sm:text-[11px]">
           HT
         </span>
@@ -92,8 +110,8 @@ export default function TarifsPage() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-[15px] leading-7 text-slate sm:text-lg sm:leading-8">
-            Du premier cadrage jusqu’à la mise en place d’un dispositif structuré, chaque format est
-            conçu pour clarifier votre situation et faire évoluer ce qui compte vraiment.
+            Du premier cadrage jusqu’à la mise en place d’un dispositif structuré,
+            chaque étape fait progresser votre projet sans recommencer le travail déjà réalisé.
           </p>
         </div>
 
@@ -120,7 +138,9 @@ export default function TarifsPage() {
                 <div>
                   <div className="flex flex-col gap-3">
                     <div className="flex items-start justify-between gap-3">
-                      <p className="pr-2 text-sm font-medium text-[#2f6df6]">{item.subtitle}</p>
+                      <p className="pr-2 text-sm font-medium text-[#2f6df6]">
+                        {item.subtitle}
+                      </p>
 
                       {item.featured ? (
                         <span className="inline-flex shrink-0 whitespace-nowrap rounded-full bg-[#2f6df6]/10 px-3 py-1 text-[11px] font-semibold text-[#2f6df6] sm:text-xs">
@@ -134,7 +154,22 @@ export default function TarifsPage() {
                     </h2>
                   </div>
 
-                  <PriceDisplay amount={item.amount} />
+                  <PriceDisplay
+                    amount={item.amount}
+                    startingFrom={item.startingFrom}
+                  />
+
+                  {item.progression && item.progressionLabel ? (
+                    <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-[#2f6df6]/10 bg-[#2f6df6]/[0.05] px-3 py-1.5">
+                      <span className="text-xs font-semibold text-[#2f6df6]">
+                        {item.progression}
+                      </span>
+
+                      <span className="text-xs text-slate/70">
+                        {item.progressionLabel}
+                      </span>
+                    </div>
+                  ) : null}
 
                   <p className="mt-5 text-sm leading-7 text-slate sm:text-[15px] sm:leading-8">
                     {item.description}
@@ -158,6 +193,19 @@ export default function TarifsPage() {
           ))}
         </div>
 
+        <div className="mx-auto mt-8 max-w-5xl">
+          <div className="rounded-[24px] border border-[#2f6df6]/10 bg-[#2f6df6]/[0.045] px-5 py-5 text-center sm:px-8 sm:py-6">
+            <p className="text-sm font-semibold text-ink sm:text-[15px]">
+              Chaque étape déjà réalisée est intégralement valorisée dans la suivante.
+            </p>
+
+            <p className="mx-auto mt-2 max-w-3xl text-sm leading-7 text-slate">
+              Vous ne payez jamais deux fois le même travail : le montant du cadrage est
+              déduit du point d’entrée, puis le point d’entrée est intégré au système complet.
+            </p>
+          </div>
+        </div>
+
         <div className="mt-10 md:mt-12">
           <div className="relative overflow-hidden rounded-[28px] border border-white/70 bg-white/70 px-5 py-7 shadow-[0_20px_60px_rgba(15,23,42,0.04)] backdrop-blur sm:rounded-[32px] sm:px-8 sm:py-10 lg:px-12 lg:py-12">
             <div className="pointer-events-none absolute -left-16 top-0 h-40 w-40 rounded-full bg-[#2f6df6]/[0.05] blur-3xl" />
@@ -166,7 +214,7 @@ export default function TarifsPage() {
             <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
               <div className="max-w-[760px]">
                 <h3 className="text-[30px] font-semibold tracking-[-0.04em] text-ink sm:text-[34px] lg:text-[38px]">
-                  Parlons de votre situation 
+                  Parlons de votre situation
                 </h3>
 
                 <p className="mt-4 max-w-[620px] text-sm leading-7 text-slate sm:text-base sm:leading-8">
@@ -174,13 +222,14 @@ export default function TarifsPage() {
                 </p>
 
                 <p className="mt-3 max-w-[680px] text-sm leading-7 text-slate sm:text-base sm:leading-8">
-                  Un échange permet de clarifier votre besoin, d’évaluer le niveau de structuration
-                  nécessaire et de définir la direction la plus pertinente.
+                  Un échange permet de clarifier votre besoin, d’évaluer le niveau de
+                  structuration nécessaire et de définir la direction la plus pertinente.
                 </p>
 
                 <p className="mt-5 max-w-[720px] text-xs leading-6 text-slate/70 sm:text-sm">
-                  Les montants indiqués constituent des repères de départ, selon la nature du besoin,
-                  le niveau de personnalisation attendu et l’ampleur du dispositif à concevoir.
+                  Le cadrage stratégique et le point d’entrée sont proposés à prix fixe.
+                  Le tarif du système complet dépend ensuite de l’ampleur, des fonctionnalités
+                  et du niveau de personnalisation du dispositif.
                 </p>
               </div>
 
