@@ -227,7 +227,7 @@ export default function TarifsPage() {
 
                 <p className="mt-5 max-w-[720px] text-xs leading-6 text-slate/70 sm:text-sm">
                   Le premier échange et le point d’entrée sont proposés à prix fixe.
-                  Le système complet démarre à 1 590 € HT et son tarif évolue selon l’ampleur,
+                  Le système complet démarre à 1 390 € HT et son tarif évolue selon l’ampleur,
                   les fonctionnalités et le niveau de personnalisation du projet.
                 </p>
               </div>
