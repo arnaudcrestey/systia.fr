@@ -14,51 +14,51 @@ type PricingItem = {
 
 const pricingItems: PricingItem[] = [
   {
-    title: 'Cadrage stratégique',
-    subtitle: 'Clarifier avant d’agir',
+    title: 'Faire le point avant d’agir',
+    subtitle: 'Clarifier votre besoin',
     amount: '190',
     description:
-      'Un temps de travail structuré pour prendre du recul, clarifier votre situation, faire ressortir les priorités et définir la direction la plus juste.',
+      'Pour comprendre la situation et définir les priorités.',
     details: [
-      'Analyse précise de votre situation',
-      'Identification des priorités réelles',
-      'Recommandation claire et exploitable',
-      'Vision du dispositif à envisager',
+      'Compréhension de votre situation',
+      'Clarification de votre besoin',
+      'Définition des priorités',
+      'Première direction à envisager',
     ],
-    progression: '190 €',
+    progression: '190 € HT',
     progressionLabel: 'Première étape',
   },
   {
     title: 'Point d’entrée sur mesure',
-    subtitle: 'Construire votre premier dispositif',
-    amount: '790',
+    subtitle: 'Construire un premier outil utile',
+    amount: '490',
     description:
-      'Un dispositif conçu pour structurer votre expertise, attirer les bonnes personnes et créer des prises de contact plus qualifiées.',
+      'Un premier outil concret, pensé à partir de votre besoin et directement utile à votre activité.',
     details: [
-      'Cadrage stratégique inclus',
-      'Structure du parcours utilisateur',
-      'Logique de conversion cohérente',
+      'Premier échange déduit',
+      'Besoin et priorités déjà clarifiés',
+      'Parcours utilisateur structuré',
       'Conception du point d’entrée',
     ],
     featured: true,
-    progression: '+ 600 €',
-    progressionLabel: 'Après le cadrage',
+    progression: '+ 300 €',
+    progressionLabel: 'Après le premier échange',
   },
   {
     title: 'Système complet',
-    subtitle: 'Structurer durablement votre activité',
-    amount: '2 590',
+    subtitle: 'Site vivant et parcours utilisateur',
+    amount: '1 390',
     description:
-      'Un système plus global pour organiser votre acquisition, votre parcours client et la cohérence d’ensemble de votre dispositif numérique.',
+      'Un système complet conçu pour évoluer avec l’activité, sans repartir de zéro à chaque nouvelle étape.',
     details: [
-      'Cadrage stratégique inclus',
-      'Point d’entrée sur mesure inclus',
+      'Premier échange déduit',
+      'Point d’entrée sur mesure déduit',
       'Site et parcours utilisateur complet',
-      'Automatisations et continuité du suivi',
-      'Adaptation globale à votre activité',
+      'Continuité entre les outils et les contenus',
+      'Site conçu pour évoluer avec votre activité',
     ],
     startingFrom: true,
-    progression: '+ 1 800 €',
+    progression: '+ 900 €',
     progressionLabel: 'Après le point d’entrée',
   },
 ];
@@ -110,8 +110,7 @@ export default function TarifsPage() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-[15px] leading-7 text-slate sm:text-lg sm:leading-8">
-            Du premier cadrage jusqu’à la mise en place d’un dispositif structuré,
-            chaque étape fait progresser votre projet sans recommencer le travail déjà réalisé.
+            Un site vivant qui avance avec votre activité, sans tout recommencer.
           </p>
         </div>
 
@@ -196,12 +195,12 @@ export default function TarifsPage() {
         <div className="mx-auto mt-8 max-w-5xl">
           <div className="rounded-[24px] border border-[#2f6df6]/10 bg-[#2f6df6]/[0.045] px-5 py-5 text-center sm:px-8 sm:py-6">
             <p className="text-sm font-semibold text-ink sm:text-[15px]">
-              Chaque étape déjà réalisée est intégralement valorisée dans la suivante.
+              Chaque étape s’appuie sur la précédente et fait avancer votre projet.
             </p>
 
             <p className="mx-auto mt-2 max-w-3xl text-sm leading-7 text-slate">
-              Vous ne payez jamais deux fois le même travail : le montant du cadrage est
-              déduit du point d’entrée, puis le point d’entrée est intégré au système complet.
+              Les cent quatre-vingt-dix euros du premier échange sont déduits du point d’entrée,
+              puis le point d’entrée est intégré au système complet : vous ne payez jamais deux fois le même travail.
             </p>
           </div>
         </div>
@@ -218,18 +217,18 @@ export default function TarifsPage() {
                 </h3>
 
                 <p className="mt-4 max-w-[620px] text-sm leading-7 text-slate sm:text-base sm:leading-8">
-                  Chaque situation mérite d’être comprise avec justesse.
+                  Commençons par comprendre votre situation et clarifier votre besoin.
                 </p>
 
                 <p className="mt-3 max-w-[680px] text-sm leading-7 text-slate sm:text-base sm:leading-8">
-                  Un échange permet de clarifier votre besoin, d’évaluer le niveau de
-                  structuration nécessaire et de définir la direction la plus pertinente.
+                  Ce premier échange permet de définir les priorités et de choisir l’étape
+                  la plus utile pour faire avancer votre activité.
                 </p>
 
                 <p className="mt-5 max-w-[720px] text-xs leading-6 text-slate/70 sm:text-sm">
-                  Le cadrage stratégique et le point d’entrée sont proposés à prix fixe.
-                  Le tarif du système complet dépend ensuite de l’ampleur, des fonctionnalités
-                  et du niveau de personnalisation du dispositif.
+                  Le premier échange et le point d’entrée sont proposés à prix fixe.
+                  Le système complet démarre à 1 590 € HT et son tarif évolue selon l’ampleur,
+                  les fonctionnalités et le niveau de personnalisation du projet.
                 </p>
               </div>
 
