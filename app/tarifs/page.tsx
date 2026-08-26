@@ -35,7 +35,7 @@ const pricingItems: PricingItem[] = [
     description:
       'Un premier outil concret, pensé à partir de votre besoin et directement utile à votre activité.',
     details: [
-      'Faire le point avant d'agir inclus',
+      'Faire le point avant d’agir inclus',
       'Besoin et priorités déjà clarifiés',
       'Parcours utilisateur structuré',
       'Conception du point d’entrée',
@@ -51,7 +51,7 @@ const pricingItems: PricingItem[] = [
     description:
       'Un système complet conçu pour évoluer avec l’activité, sans repartir de zéro à chaque nouvelle étape.',
     details: [
-      'Faire le point avant d'agir inclus',
+      'Faire le point avant d’agir inclus',
       'Point d’entrée sur mesure inclus',
       'Site et parcours utilisateur complet',
       'Continuité entre les outils et les contenus',
