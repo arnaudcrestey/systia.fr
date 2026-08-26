@@ -207,8 +207,8 @@ export default function TarifsPage() {
                 </h2>
 
                 <p className="mt-4 text-sm leading-7 text-slate sm:text-[15px] sm:leading-8 lg:mt-3 lg:leading-7">
-                  Votre activité évolue : une offre, une actu, un produit de saison ou un visuel
-                  peuvent évoluer avec elle.
+                  Une offre, une actualité, un produit de saison ou un visuel : votre site évolue avec votre activité.
+                
                 </p>
 
                 <p className="mt-3 text-sm leading-7 text-slate sm:text-[15px] sm:leading-8 lg:mt-2 lg:leading-7">
