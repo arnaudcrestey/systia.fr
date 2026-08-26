@@ -193,37 +193,37 @@ export default function TarifsPage() {
         </div>
 
         <div className="mx-auto mt-8 max-w-5xl">
-          <div className="relative overflow-hidden rounded-[28px] border border-white/70 bg-white/82 px-5 py-6 shadow-[0_18px_50px_rgba(15,23,42,0.05)] backdrop-blur sm:px-8 sm:py-8 lg:px-10">
+          <div className="relative overflow-hidden rounded-[28px] border border-white/70 bg-white/82 px-5 py-6 shadow-[0_18px_50px_rgba(15,23,42,0.05)] backdrop-blur sm:px-8 sm:py-8 lg:px-8 lg:py-6">
             <div className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-[#2f6df6]/[0.06] blur-3xl" />
 
-            <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between sm:gap-10 lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:items-stretch lg:gap-8">
+            <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between sm:gap-10 lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-6">
               <div className="max-w-3xl">
                 <p className="text-sm font-medium text-[#2f6df6]">
                   Après la mise en ligne
                 </p>
 
-                <h2 className="mt-2 text-[28px] font-semibold tracking-[-0.04em] text-ink sm:text-[32px]">
+                <h2 className="mt-2 text-[28px] font-semibold tracking-[-0.04em] text-ink sm:text-[32px] lg:text-[30px]">
                   Faire vivre votre site
                 </h2>
 
-                <p className="mt-4 text-sm leading-7 text-slate sm:text-[15px] sm:leading-8">
+                <p className="mt-4 text-sm leading-7 text-slate sm:text-[15px] sm:leading-8 lg:mt-3 lg:leading-7">
                   Votre activité évolue : une offre, une actu, un produit de saison ou un visuel
                   peuvent évoluer avec elle.
                 </p>
 
-                <p className="mt-3 text-sm leading-7 text-slate sm:text-[15px] sm:leading-8">
+                <p className="mt-3 text-sm leading-7 text-slate sm:text-[15px] sm:leading-8 lg:mt-2 lg:leading-7">
                   Une évolution utile, quand votre activité le demande, pour garder votre site vivant sans tout recommencer.
                 </p>
 
-                <p className="mt-4 text-xs leading-6 text-slate/70 sm:text-sm">
+                <p className="mt-4 text-xs leading-6 text-slate/70 sm:text-sm lg:mt-3">
                   Les évolutions plus importantes restent sur devis. Cette option intervient après
                   la création du site et n’est pas incluse dans le système complet.
                 </p>
               </div>
 
-              <div className="shrink-0 sm:text-right lg:flex lg:min-h-full lg:flex-col lg:items-center lg:justify-center lg:rounded-[22px] lg:border lg:border-[#2f6df6]/10 lg:bg-[#2f6df6]/[0.045] lg:px-6 lg:py-8 lg:text-center">
+              <div className="shrink-0 sm:text-right lg:flex lg:flex-col lg:items-center lg:justify-center lg:rounded-[18px] lg:border lg:border-[#2f6df6]/12 lg:bg-[#2f6df6]/[0.04] lg:px-5 lg:py-4 lg:text-center">
                 <div className="flex flex-nowrap items-end gap-x-2 sm:justify-end lg:justify-center">
-                  <span className="whitespace-nowrap text-[31px] font-semibold tracking-[-0.045em] text-ink sm:text-[34px]">
+                  <span className="whitespace-nowrap text-[31px] font-semibold tracking-[-0.045em] text-ink sm:text-[34px] lg:text-[28px]">
                     À partir de 90 €
                   </span>
 
