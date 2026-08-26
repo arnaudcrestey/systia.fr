@@ -193,13 +193,55 @@ export default function TarifsPage() {
         </div>
 
         <div className="mx-auto mt-8 max-w-5xl">
+          <div className="relative overflow-hidden rounded-[28px] border border-white/70 bg-white/82 px-5 py-6 shadow-[0_18px_50px_rgba(15,23,42,0.05)] backdrop-blur sm:px-8 sm:py-8 lg:px-10">
+            <div className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-[#2f6df6]/[0.06] blur-3xl" />
+
+            <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between sm:gap-10">
+              <div className="max-w-3xl">
+                <p className="text-sm font-medium text-[#2f6df6]">
+                  Après la mise en ligne
+                </p>
+
+                <h2 className="mt-2 text-[28px] font-semibold tracking-[-0.04em] text-ink sm:text-[32px]">
+                  Faire vivre votre site
+                </h2>
+
+                <p className="mt-4 text-sm leading-7 text-slate sm:text-[15px] sm:leading-8">
+                  Votre activité évolue : une offre, une actu, un produit de saison ou un visuel
+                  peuvent évoluer avec elle.
+                </p>
+
+                <p className="mt-3 text-sm leading-7 text-slate sm:text-[15px] sm:leading-8">
+                  Une évolution utile, quand votre activité le demande, pour garder votre site vivant sans tout recommencer.
+                </p>
+
+                <p className="mt-4 text-xs leading-6 text-slate/70 sm:text-sm">
+                  Les évolutions plus importantes restent sur devis. Cette option intervient après
+                  la création du site et n’est pas incluse dans le système complet.
+                </p>
+              </div>
+
+              <div className="shrink-0 sm:text-right">
+                <p className="whitespace-nowrap text-[31px] font-semibold tracking-[-0.045em] text-ink sm:text-[34px]">
+                  À partir de 90 €
+                </p>
+
+                <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate/60 sm:text-[11px]">
+                  HT par évolution
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-8 max-w-5xl">
           <div className="rounded-[24px] border border-[#2f6df6]/10 bg-[#2f6df6]/[0.045] px-5 py-5 text-center sm:px-8 sm:py-6">
             <p className="text-sm font-semibold text-ink sm:text-[15px]">
               Chaque étape s’appuie sur la précédente et fait avancer votre projet.
             </p>
 
             <p className="mx-auto mt-2 max-w-3xl text-sm leading-7 text-slate">
-              Les cent quatre-vingt-dix euros du premier échange sont déduits du point d’entrée,
+              Les cent quatre-vingt-dix euros de « Faire le point avant d’agir » sont intégrés au point d’entrée,
               puis le point d’entrée est intégré au système complet : vous ne payez jamais deux fois le même travail.
             </p>
           </div>
