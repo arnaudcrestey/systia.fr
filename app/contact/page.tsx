@@ -7,10 +7,10 @@ import { Surface } from '@/components/ui';
 const directContactEmail = 'demande@arnaudcrestey.com';
 
 type ContactType =
+  | 'faire-le-point'
   | 'point-entree'
-  | 'structurer-activite'
-  | 'automatisation'
-  | 'clarification'
+  | 'site-vivant'
+  | 'faire-vivre-site'
   | 'autre';
 
 const messageTemplates: {
@@ -19,55 +19,55 @@ const messageTemplates: {
   content: string;
 }[] = [
   {
-    label: 'Conception d’un point d’entrée',
-    type: 'point-entree',
+    label: 'Faire le point sur votre situation',
+    type: 'faire-le-point',
     content: `Bonjour,
 
-Je souhaite présenter une demande concernant la conception d’un point d’entrée.
+Je souhaite faire le point sur ma situation.
 
 Activité :
 Rôle / statut :
-Besoin identifié :
+Situation actuelle :
+Ce que je souhaite clarifier :
+Contexte ou éléments utiles :`,
+  },
+  {
+    label: 'Créer un point d’entrée',
+    type: 'point-entree',
+    content: `Bonjour,
+
+Je souhaite présenter une demande concernant la création d’un point d’entrée.
+
+Activité :
+Rôle / statut :
+Ce que je souhaite rendre plus visible :
 Objectif recherché :
 Contexte ou éléments utiles :`,
   },
   {
-    label: 'Clarification du positionnement',
-    type: 'clarification',
+    label: 'Créer un site vivant',
+    type: 'site-vivant',
     content: `Bonjour,
 
-Je souhaite présenter une situation liée à la clarification de mon positionnement.
+Je souhaite présenter une demande concernant la création d’un site vivant.
 
 Activité :
 Rôle / statut :
-Situation actuelle :
-Ce qui semble manquer de clarté :
+Ce que le site doit permettre :
+Objectif recherché :
 Contexte ou éléments utiles :`,
   },
   {
-    label: 'Automatisation d’un parcours',
-    type: 'automatisation',
+    label: 'Faire vivre votre site',
+    type: 'faire-vivre-site',
     content: `Bonjour,
 
-Je souhaite présenter une demande concernant l’automatisation d’un parcours ou d’un processus.
+Je souhaite présenter une demande concernant l’évolution de mon site.
 
 Activité :
 Rôle / statut :
-Parcours ou processus concerné :
-Résultat attendu :
-Contexte ou éléments utiles :`,
-  },
-  {
-    label: 'Structuration d’activité',
-    type: 'structurer-activite',
-    content: `Bonjour,
-
-Je souhaite présenter une situation liée à la structuration de mon activité.
-
-Activité :
-Rôle / statut :
-Situation actuelle :
-Ce qui doit être clarifié ou structuré :
+Adresse de mon site :
+Ce que je souhaite faire évoluer :
 Contexte ou éléments utiles :`,
   },
 ];
