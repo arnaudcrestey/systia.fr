@@ -51,9 +51,8 @@ export default function PolitiqueConfidentialitePage() {
                       <strong>Adresse :</strong> 36 Route du Coisel, Viessoix / La
                       Personnerie, 14410 Valdallière
                     </p>
-                    <p>
-                      <strong>Immatriculation :</strong> SIREN 481 437 515 - RCS Caen
-                    </p>
+                    <p><strong>SIREN :</strong> 481 437 515</p>
+                    <p><strong>SIRET :</strong> 481 437 515 00028 - RCS Caen</p>
                     <p>
                       <strong>E-mail :</strong> demande@arnaudcrestey.com
                     </p>

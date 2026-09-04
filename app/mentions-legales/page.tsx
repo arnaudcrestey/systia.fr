@@ -48,9 +48,8 @@ export default function MentionsLegalesPage() {
                   <p>
                     <strong>Téléphone :</strong> +33 6 81 95 23 45
                   </p>
-                  <p>
-                    <strong>Immatriculation :</strong> SIREN 481 437 515 - RCS Caen
-                  </p>
+                  <p><strong>SIREN :</strong> 481 437 515</p>
+                  <p><strong>SIRET :</strong> 481 437 515 00028 - RCS Caen</p>
                   <p>
                     <strong>Directeur de la publication :</strong> Arnaud Crestey
                   </p>
