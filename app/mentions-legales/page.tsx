@@ -33,18 +33,14 @@ export default function MentionsLegalesPage() {
 
                 <div className="mt-4 space-y-3 text-[15px] leading-8 text-slate sm:text-base">
                   <p>
-                    <strong>Nom / dénomination :</strong> SASU Arnaud Crestey
+                    <strong>Nom :</strong> Arnaud Crestey
                   </p>
                   <p>
-                    <strong>Forme juridique :</strong> Société par Actions Simplifiée
-                    Unipersonnelle (SASU)
+                    <strong>Forme juridique :</strong> Entrepreneur individuel
                   </p>
                   <p>
-                    <strong>Capital social :</strong> 500 €
-                  </p>
-                  <p>
-                    <strong>Adresse :</strong> 36 route du coisel, la personnerie,
-                    14410 Valdallière – France
+                    <strong>Adresse :</strong> 36 Route du Coisel, Viessoix / La
+                    Personnerie, 14410 Valdallière - France
                   </p>
                   <p>
                     <strong>E-mail :</strong> demande@arnaudcrestey.com
@@ -53,7 +49,7 @@ export default function MentionsLegalesPage() {
                     <strong>Téléphone :</strong> +33 6 81 95 23 45
                   </p>
                   <p>
-                    <strong>SIREN / SIRET :</strong> à compléter dès immatriculation
+                    <strong>Immatriculation :</strong> SIREN 481 437 515 - RCS Caen
                   </p>
                   <p>
                     <strong>Directeur de la publication :</strong> Arnaud Crestey

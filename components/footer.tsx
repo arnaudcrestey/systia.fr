@@ -117,7 +117,10 @@ export default function Footer() {
         {/* BAS */}
         <div className="mt-12 border-t border-[#d9def8] pt-6">
           <div className={inter.className + " flex flex-col gap-3 text-center text-[14px] text-[#64748b] md:flex-row md:items-center md:justify-between md:text-left"}>
-            <p>© 2026 SYSTIA. Tous droits réservés.</p>
+            <p>
+              © 2026 SYSTIA. Édité par Arnaud Crestey - Entrepreneur individuel -
+              SIREN 481 437 515 - RCS Caen.
+            </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-end">
               <Link href="/mentions-legales" className="hover:text-[#1d4ed8]">Mentions légales</Link>

@@ -42,15 +42,17 @@ export default function PolitiqueConfidentialitePage() {
 
                   <div className="space-y-2">
                     <p>
-                      <strong>Nom / dénomination :</strong> Arnaud Crestey
+                      <strong>Nom :</strong> Arnaud Crestey - Entrepreneur individuel
                     </p>
                     <p>
-                      <strong>Statut :</strong> à compléter selon la structure
-                      juridique en vigueur
+                      <strong>Statut :</strong> Entrepreneur individuel
                     </p>
                     <p>
-                      <strong>Adresse :</strong> à compléter selon l’adresse
-                      professionnelle retenue
+                      <strong>Adresse :</strong> 36 Route du Coisel, Viessoix / La
+                      Personnerie, 14410 Valdallière
+                    </p>
+                    <p>
+                      <strong>Immatriculation :</strong> SIREN 481 437 515 - RCS Caen
                     </p>
                     <p>
                       <strong>E-mail :</strong> demande@arnaudcrestey.com
