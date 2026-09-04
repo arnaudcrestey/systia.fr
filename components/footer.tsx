@@ -118,8 +118,8 @@ export default function Footer() {
         <div className="mt-12 border-t border-[#d9def8] pt-6">
           <div className={inter.className + " flex flex-col gap-6 text-center text-[14px] leading-6 text-[#64748b] md:flex-row md:items-center md:justify-between md:gap-4 md:text-left"}>
             <p className="mx-auto max-w-md md:mx-0">
-              <span className="block">© 2026 SYSTIA. Édité par Arnaud Crestey - Entrepreneur individuel.</span>
-              <span className="block">SIREN 481 437 515 - SIRET 481 437 515 00028 - RCS Caen.</span>
+              <span className="block">© 2026 SYSTIA. Édité par Arnaud Crestey, conseil en communication et stratégie digitale.</span>
+              <span className="block">SIRET 481 437 515 00028 - RCS Caen.</span>
             </p>
 
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-4 md:justify-end">
