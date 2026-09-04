@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { contactDetails } from '@/data/site';
 import { Surface } from '@/components/ui';
+
+const directContactEmail = 'demande@arnaudcrestey.com';
 
 type ContactType =
   | 'point-entree'
@@ -330,10 +331,10 @@ Délai éventuel :`;
               <div className="mt-8 border-t border-[#d8e2ff] pt-6 text-center text-sm leading-7 text-slate sm:mt-10">
                 <span className="font-medium text-ink">Contact direct :</span>{' '}
                 <a
-                  href={`mailto:${contactDetails.email}`}
+                  href={`mailto:${directContactEmail}`}
                   className="break-words transition-colors duration-200 hover:text-ink"
                 >
-                  {contactDetails.email}
+                  {directContactEmail}
                 </a>
               </div>
             </div>
