@@ -199,8 +199,8 @@ Délai éventuel :`;
 
               <p className="mt-4 max-w-3xl text-[15px] leading-7 text-slate sm:mt-5 sm:text-lg sm:leading-8">
                 Décrivez votre situation, votre besoin ou le dispositif à
-                concevoir. Chaque demande est abordée à partir de son contexte,
-                de ses enjeux et de son niveau de structuration.
+                concevoir. SYSTIA fait partie de l’univers ArnaudCrestey.com,
+                dédié à la conception de systèmes d’activité.
               </p>
 
               <div className="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2">
