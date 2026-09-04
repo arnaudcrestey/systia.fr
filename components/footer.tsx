@@ -100,8 +100,8 @@ export default function Footer() {
               </h3>
 
               <div className={inter.className + " mt-6 flex flex-col items-center gap-5 text-[15px] text-[#334155] md:items-start"}>
-                <a href="mailto:contact@systia.fr" className="break-all hover:text-[#1d4ed8]">
-                  contact@systia.fr
+                <a href="mailto:demande@arnaudcrestey.com" className="break-all hover:text-[#1d4ed8]">
+                  demande@arnaudcrestey.com
                 </a>
                 <a href="tel:+33681952345" className="hover:text-[#1d4ed8]">
                   +33 6 81 95 23 45
