@@ -79,8 +79,8 @@ function PriceDisplay({
   return (
     <div className="mt-6 flex items-end">
       <div className="flex min-w-0 flex-wrap items-end gap-x-2 gap-y-1">
+        {startingFrom ? <span className="w-full text-sm font-medium text-slate">À partir de</span> : null}
         <span className="whitespace-nowrap text-[31px] font-semibold tracking-[-0.045em] text-ink sm:text-[34px] lg:text-[35px]">
-          {startingFrom ? 'À partir de ' : ''}
           {amount} €
         </span>
 
@@ -136,7 +136,7 @@ export default function TarifsPage() {
               <div className="relative flex h-full flex-col">
                 <div>
                   <div className="flex flex-col gap-3">
-                    <div className="flex items-start justify-between gap-3">
+                    <div className="flex flex-wrap items-start justify-between gap-3">
                       <p className="pr-2 text-sm font-medium text-[#2f6df6]">
                         {item.subtitle}
                       </p>
@@ -192,53 +192,78 @@ export default function TarifsPage() {
           ))}
         </div>
 
-        <div className="mx-auto mt-8 max-w-5xl">
-          <div className="relative overflow-hidden rounded-[28px] border border-white/70 bg-white/82 px-5 py-6 shadow-[0_18px_50px_rgba(15,23,42,0.05)] backdrop-blur sm:px-8 sm:py-8 lg:px-8 lg:py-6">
-            <div className="pointer-events-none absolute -right-16 -top-16 h-32 w-32 rounded-full bg-[#2f6df6]/[0.06] blur-3xl" />
-
-            <div className="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between sm:gap-10 lg:grid lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-6">
-              <div className="max-w-3xl">
-                <p className="text-sm font-medium text-[#2f6df6]">
-                  Après la mise en ligne
-                </p>
-
-                <h2 className="mt-2 text-[28px] font-semibold tracking-[-0.04em] text-ink sm:text-[32px] lg:text-[30px]">
-                  Faire vivre votre site
-                </h2>
-
-                <p className="mt-4 text-sm leading-7 text-slate sm:text-[15px] sm:leading-8 lg:mt-3 lg:leading-7">
-                  Une offre, une actualité, un produit de saison ou un visuel : votre site évolue avec votre activité.
-                
-                </p>
-
-                <p className="mt-3 text-sm leading-7 text-slate sm:text-[15px] sm:leading-8 lg:mt-2 lg:leading-7">
-                  Une évolution utile, quand votre activité le demande, pour garder votre site vivant sans tout recommencer.
-                </p>
-
-                <p className="mt-4 text-xs leading-6 text-slate/70 sm:text-sm lg:mt-3">
-                  Les évolutions plus importantes restent sur devis. Cette option intervient après
-                  la création du site et n’est pas incluse dans le système complet.
-                </p>
+        <section aria-labelledby="paiement-title" className="mx-auto mt-8 max-w-5xl rounded-[28px] border border-[#2f6df6]/10 bg-white/80 p-5 sm:p-8">
+          <p className="text-sm font-medium text-[#2f6df6]">La création, à votre rythme</p>
+          <h2 id="paiement-title" className="mt-2 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+            Choisissez votre mode de paiement
+          </h2>
+          <div className="mt-6 grid gap-3 sm:grid-cols-3">
+            {[
+              ['Comptant', 'Un règlement unique pour la création.'],
+              ['Sur 12 mois', 'Le paiement de la création réparti sur 12 mois.'],
+              ['Sur 24 mois', 'Le paiement de la création réparti sur 24 mois.'],
+            ].map(([title, description]) => (
+              <div key={title} className="min-w-0 rounded-2xl border border-[#2f6df6]/10 bg-[#2f6df6]/[0.035] p-5">
+                <h3 className="text-lg font-semibold text-ink">{title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate">{description}</p>
               </div>
-
-              <div className="shrink-0 sm:text-right lg:flex lg:flex-col lg:items-center lg:justify-center lg:rounded-[18px] lg:border lg:border-[#2f6df6]/12 lg:bg-[#2f6df6]/[0.04] lg:px-5 lg:py-4 lg:text-center">
-                <div className="flex flex-nowrap items-end gap-x-2 sm:justify-end lg:justify-center">
-                  <span className="whitespace-nowrap text-[31px] font-semibold tracking-[-0.045em] text-ink sm:text-[34px] lg:text-[28px]">
-                    À partir de 90 €
-                  </span>
-
-                  <span className="shrink-0 pb-[6px] text-[10px] font-semibold uppercase tracking-[0.18em] text-slate/60 sm:text-[11px]">
-                    HT
-                  </span>
-                </div>
-
-                <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate/60 sm:text-[11px]">
-                  Par évolution
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
-        </div>
+          <p className="mt-5 text-sm leading-7 text-slate">
+            Le montant total, les échéances et les conditions de paiement sont précisés dans votre devis avant engagement.
+            Les étapes déjà réglées sont déduites du projet.
+          </p>
+          <p className="mt-2 text-sm font-medium leading-7 text-ink">
+            Après la mise en ligne, l’abonnement ci-dessous s’ajoute aux éventuelles mensualités de création.
+          </p>
+        </section>
+
+        <section aria-labelledby="suivi-title" className="mx-auto mt-8 max-w-5xl rounded-[28px] border border-[#2f6df6]/15 bg-white/90 p-5 shadow-[0_18px_50px_rgba(15,23,42,0.05)] sm:p-8">
+          <p className="text-sm font-medium text-[#2f6df6]">Après la mise en ligne</p>
+          <h2 id="suivi-title" className="mt-2 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+            Faire vivre votre site
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm leading-7 text-slate sm:text-base">
+            Un abonnement pour le fonctionnement du site. Des évolutions à la demande pour votre activité.
+          </p>
+          <div className="mt-6 grid gap-5 md:grid-cols-2">
+            <article className="min-w-0 rounded-2xl border border-[#2f6df6]/15 bg-[#2f6df6]/[0.04] p-5 sm:p-6">
+              <h3 className="text-lg font-semibold text-ink">Le suivi mensuel</h3>
+              <p className="mt-4 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                <span className="text-4xl font-semibold tracking-tight text-ink">29 €</span>
+                <span className="text-sm text-slate">HT / mois</span>
+              </p>
+              <ul className="mt-5 space-y-3 text-sm leading-7 text-slate">
+                {['Hébergement du site', 'Entretien technique', 'Assistance par e-mail pour les questions et problèmes liés au fonctionnement du site'].map((detail) => (
+                  <li key={detail} className="flex items-start gap-3"><CheckDot /><span>{detail}</span></li>
+                ))}
+              </ul>
+              <p className="mt-5 text-sm leading-6 text-slate">
+                À partir de la mise en ligne. Les modifications de contenu et les nouvelles fonctionnalités ne sont pas incluses.
+              </p>
+            </article>
+            <article className="min-w-0 rounded-2xl border border-[#2f6df6]/10 bg-white p-5 sm:p-6">
+              <h3 className="text-lg font-semibold text-ink">Les petites évolutions</h3>
+              <p className="mt-4 text-sm text-slate">À partir de</p>
+              <p className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                <span className="text-4xl font-semibold tracking-tight text-ink">39 €</span>
+                <span className="text-sm text-slate">HT / évolution</span>
+              </p>
+              <ul className="mt-5 space-y-3 text-sm leading-7 text-slate">
+                {['Modifier un texte', 'Remplacer un visuel', 'Mettre en avant une offre sur une page existante'].map((detail) => (
+                  <li key={detail} className="flex items-start gap-3"><CheckDot /><span>{detail}</span></li>
+                ))}
+              </ul>
+              <p className="mt-5 text-sm leading-6 text-slate">
+                Avec les textes et visuels fournis par vos soins. Le périmètre et le prix sont validés avant chaque intervention.
+                Une nouvelle page, un quiz ou une fonctionnalité supplémentaire restent sur devis.
+              </p>
+            </article>
+          </div>
+          <p className="mt-5 text-sm leading-7 text-slate">
+            L’abonnement et les évolutions sont distincts du prix de création, y compris pour le système complet.
+          </p>
+        </section>
 
         <div className="mx-auto mt-8 max-w-5xl">
           <div className="rounded-[24px] border border-[#2f6df6]/10 bg-[#2f6df6]/[0.045] px-5 py-5 text-center sm:px-8 sm:py-6">
