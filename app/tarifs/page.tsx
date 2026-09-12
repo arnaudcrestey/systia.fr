@@ -195,26 +195,31 @@ export default function TarifsPage() {
         <section aria-labelledby="paiement-title" className="mx-auto mt-8 max-w-5xl rounded-[28px] border border-[#2f6df6]/10 bg-white/80 p-5 sm:p-8">
           <p className="text-sm font-medium text-[#2f6df6]">La création, à votre rythme</p>
           <h2 id="paiement-title" className="mt-2 text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
-            Choisissez votre mode de paiement
+            Paiement du système complet
           </h2>
+          <p className="mt-3 text-sm leading-7 text-slate">À partir de 1 390 € HT, comptant ou échelonné sans supplément.</p>
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
             {[
-              ['Comptant', 'Un règlement unique pour la création.'],
-              ['Sur 12 mois', 'Le paiement de la création réparti sur 12 mois.'],
-              ['Sur 24 mois', 'Le paiement de la création réparti sur 24 mois.'],
-            ].map(([title, description]) => (
+              ['Comptant', '1 390 €', 'HT en une fois'],
+              ['Sur 12 mois', '115,83 €', 'HT / mois environ'],
+              ['Sur 24 mois', '57,92 €', 'HT / mois environ'],
+            ].map(([title, amount, description]) => (
               <div key={title} className="min-w-0 rounded-2xl border border-[#2f6df6]/10 bg-[#2f6df6]/[0.035] p-5">
                 <h3 className="text-lg font-semibold text-ink">{title}</h3>
+                <p className="mt-4 text-[28px] font-semibold tracking-tight text-ink">{amount}</p>
                 <p className="mt-2 text-sm leading-6 text-slate">{description}</p>
               </div>
             ))}
           </div>
           <p className="mt-5 text-sm leading-7 text-slate">
-            Le montant total, les échéances et les conditions de paiement sont précisés dans votre devis avant engagement.
-            Les étapes déjà réglées sont déduites du projet.
+            Exemple pour un système complet à 1 390 € HT : le total reste le même, quel que soit le mode de paiement.
+            La dernière échéance ajuste les centimes. Votre devis précise le montant de votre projet et son échéancier,
+            après déduction des étapes déjà réglées.
           </p>
           <p className="mt-2 text-sm font-medium leading-7 text-ink">
-            Après la mise en ligne, l’abonnement ci-dessous s’ajoute aux éventuelles mensualités de création.
+            Exemple sur 12 mois : une fois le site en ligne, comptez environ 144,83 € HT par mois
+            (115,83 € pour la création + 29 € pour le suivi). Une fois la création entièrement réglée,
+            seul le suivi à 29 € HT par mois continue. Si vous payez comptant, seul ce suivi est à régler après la mise en ligne.
           </p>
         </section>
 
@@ -243,20 +248,24 @@ export default function TarifsPage() {
               </p>
             </article>
             <article className="min-w-0 rounded-2xl border border-[#2f6df6]/10 bg-white p-5 sm:p-6">
-              <h3 className="text-lg font-semibold text-ink">Les petites évolutions</h3>
+              <h3 className="text-lg font-semibold text-ink">Une nouveauté à partager ?</h3>
+              <p className="mt-2 text-sm leading-7 text-slate">Faites évoluer votre site.</p>
               <p className="mt-4 text-sm text-slate">À partir de</p>
               <p className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
                 <span className="text-4xl font-semibold tracking-tight text-ink">39 €</span>
-                <span className="text-sm text-slate">HT / évolution</span>
+                <span className="text-sm text-slate">HT / intervention</span>
               </p>
               <ul className="mt-5 space-y-3 text-sm leading-7 text-slate">
-                {['Modifier un texte', 'Remplacer un visuel', 'Mettre en avant une offre sur une page existante'].map((detail) => (
+                {['Annoncer une offre du moment', 'Présenter un produit de saison, comme la galette de janvier', 'Actualiser vos horaires', 'Mettre en avant un événement'].map((detail) => (
                   <li key={detail} className="flex items-start gap-3"><CheckDot /><span>{detail}</span></li>
                 ))}
               </ul>
               <p className="mt-5 text-sm leading-6 text-slate">
-                Avec les textes et visuels fournis par vos soins. Le périmètre et le prix sont validés avant chaque intervention.
-                Une nouvelle page, un quiz ou une fonctionnalité supplémentaire restent sur devis.
+                Pour une modification ciblée sur une page existante. Le prix est confirmé ensemble avant de commencer.
+              </p>
+              <p className="mt-3 text-sm leading-6 text-slate">
+                Textes et photos fournis par vos soins. Pour une nouvelle page, un quiz ou une fonctionnalité supplémentaire,
+                nous préparons un devis.
               </p>
             </article>
           </div>
