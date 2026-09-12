@@ -274,7 +274,7 @@ export default function TarifsPage() {
 
             <p className="mx-auto mt-2 max-w-3xl text-sm leading-7 text-slate">
               Vous payez votre système complet sur douze mois. Une fois le site en ligne :
-              115,83 € de création + 29 € de suivi, soit <strong className="font-semibold text-ink">144,83 € HT par mois.</strong>
+              115,83 € de création + 29 € de suivi, soit <strong className="font-semibold text-ink">144,83 € HT <span className="whitespace-nowrap">par mois.</span></strong>
             </p>
             <p className="mx-auto mt-3 max-w-3xl text-sm leading-7 text-slate">
               Ce mois-ci, vous ajoutez une offre de saison, pour une intervention à 39 € :
