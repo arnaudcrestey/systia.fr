@@ -200,27 +200,19 @@ export default function TarifsPage() {
           <p className="mt-3 text-sm leading-7 text-slate">À partir de 1 390 € HT, comptant ou échelonné sans supplément.</p>
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
             {[
-              ['Comptant', '1 390 €', 'HT en une fois'],
-              ['Sur 12 mois', '115,83 €', 'HT / mois environ'],
-              ['Sur 24 mois', '57,92 €', 'HT / mois environ'],
-            ].map(([title, amount, description]) => (
+              ['Comptant', '1 390 €'],
+              ['Sur 12 mois', '115,83 €'],
+              ['Sur 24 mois', '57,92 €'],
+            ].map(([title, amount]) => (
               <div key={title} className="min-w-0 rounded-2xl border border-[#2f6df6]/10 bg-[#2f6df6]/[0.035] p-5">
                 <h3 className="text-lg font-semibold text-ink">{title}</h3>
-                <p className="mt-4 text-[28px] font-semibold tracking-tight text-ink">{amount}</p>
-                <p className="mt-2 text-sm leading-6 text-slate">{description}</p>
+                <p className="mt-4 flex flex-wrap items-baseline gap-2 text-[28px] font-semibold tracking-tight text-ink">
+                  <span>{amount}</span>
+                  <span className="text-[10px] font-semibold tracking-[0.18em] text-slate/60">HT</span>
+                </p>
               </div>
             ))}
           </div>
-          <p className="mt-5 text-sm leading-7 text-slate">
-            Exemple pour un système complet à 1 390 € HT : le total reste le même, quel que soit le mode de paiement.
-            La dernière échéance ajuste les centimes. Votre devis précise le montant de votre projet et son échéancier,
-            après déduction des étapes déjà réglées.
-          </p>
-          <p className="mt-2 text-sm font-medium leading-7 text-ink">
-            Exemple sur 12 mois : une fois le site en ligne, comptez environ 144,83 € HT par mois
-            (115,83 € pour la création + 29 € pour le suivi). Une fois la création entièrement réglée,
-            seul le suivi à 29 € HT par mois continue. Si vous payez comptant, seul ce suivi est à régler après la mise en ligne.
-          </p>
         </section>
 
         <section aria-labelledby="suivi-title" className="mx-auto mt-8 max-w-5xl rounded-[28px] border border-[#2f6df6]/15 bg-white/90 p-5 shadow-[0_18px_50px_rgba(15,23,42,0.05)] sm:p-8">
@@ -277,12 +269,16 @@ export default function TarifsPage() {
         <div className="mx-auto mt-8 max-w-5xl">
           <div className="rounded-[24px] border border-[#2f6df6]/10 bg-[#2f6df6]/[0.045] px-5 py-5 text-center sm:px-8 sm:py-6">
             <p className="text-sm font-semibold text-ink sm:text-[15px]">
-              Chaque étape s’appuie sur la précédente et fait avancer votre projet.
+              Un exemple concret
             </p>
 
             <p className="mx-auto mt-2 max-w-3xl text-sm leading-7 text-slate">
-              Les cent quatre-vingt-dix euros de « Faire le point avant d’agir » sont intégrés au point d’entrée,
-              puis le point d’entrée est intégré au système complet : vous ne payez jamais deux fois le même travail.
+              Vous payez votre système complet sur douze mois. Une fois le site en ligne :
+              115,83 € de création + 29 € de suivi, soit <strong className="font-semibold text-ink">144,83 € HT par mois.</strong>
+            </p>
+            <p className="mx-auto mt-3 max-w-3xl text-sm leading-7 text-slate">
+              Ce mois-ci, vous ajoutez une offre de saison, pour une intervention à 39 € :
+              votre total passe à <strong className="font-semibold text-ink">183,83 € HT pour ce mois seulement.</strong>
             </p>
           </div>
         </div>
